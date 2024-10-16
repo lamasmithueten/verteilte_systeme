@@ -1,0 +1,72 @@
+<?php
+	include_once("php/passwordReset.php");
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title>Anarchy Password Reset</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" href="../icon/icon.png">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/authenticationPopup.js"></script>
+</head>
+<body>
+	<?php
+	session_start();
+	$popUpStyle = "display: none;";
+	$message = "";
+	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin']) {
+	header('location:mainpage');
+	} else {
+		if(isset($_SESSION['showPopup']) && $_SESSION['showPopup']) {
+			$message = "If an account belongs to this e-mail, a reset token was sent to this e-mail";
+			$popUpStyle = "display: flex;";
+			$_SESSION['showPopup'] = false;
+		}
+		if(isset($_POST['code']) && isset($_POST['password'])) {
+			$message = resetPassword($_POST['code'],$_POST['password'],$_POST['password2']);
+			$popUpStyle = "display: flex;";
+		}
+			
+	?>
+    <div class="authenticate">
+		<h1>Passwort Reset</h1>
+		<div class="slider-position">
+			<label class="switch">
+				<input type="checkbox" id="themeSwitch">
+				<span class="slider round"></span>
+			</label>
+		</div>
+		<form action="" method="post">
+			<label for="code">
+				<i class="fas fa-user"></i>
+			</label>
+			<input type="text" name="code" placeholder="reset code" id="code" required>
+            <label for="password">
+				<i class="fas fa-user"></i>
+			</label>
+			<input type="password" name="password" placeholder="New password" id="password" required>
+			<label for="password2">
+				<i class="fas fa-user"></i>
+			</label>
+			<input type="password" name="password2" placeholder="Repeat new password" id="password2" required>
+			<input type="submit" value="Reset">
+		</form>
+		<div class="register-link">
+			<a href="passwordReset.html">get reset code</a>
+		</div>
+		<div class="register-link">
+			<a href="index.html">back to login</a>
+		</div>
+	</div>
+	<div class="authenticationPopup" id="popup" style="<?php echo $popUpStyle; ?>">
+		<div class="message">
+			<?php echo $message; ?>
+		</div>
+		<button class="close-btn" onclick="closePopup()">×</button>
+	</div>
+	<?php } ?>
+	<script src="js/switchTheme.js"></script>
+</body>
+</html>

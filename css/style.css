@@ -1,0 +1,556 @@
+/* Allgemeine Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+button,
+input[type="submit"] {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+:root {
+    --color-bg: #ffffff;
+    --color-text: #000000;
+}
+/*Style für den Dark-Theme*/
+body.dark {
+    background-color: #1A1A1A;
+    color: #F5F5F5;
+}
+
+    body.dark .thread,
+    body.dark .post,
+    body.dark .comment,
+    body.dark textarea,
+    body.dark input[type="text"],
+    body.dark input[type="email"], 
+    body.dark input[type="password"] {
+        background-color: #2B2B2B;
+        color: #F5F5F5;
+    }
+
+    body.dark .authenticate input[type="submit"],
+    body.dark .container input[type="submit"],
+    body.dark .threads-link,
+    body.dark th,
+    body.dark .input[type="submit"],
+    body.dark .delete-button button,
+    body.dark .logout-button button,
+    body.dark .admin-form button[type="button"],
+    body.dark .comment-form input[type="submit"],
+    body.dark .search-button input[type="submit"],
+    body.dark .banner a{
+        background-color: #ff8400;
+    }
+
+    body.dark .like-checkbox:checked + .like-label .thumb-up {
+        fill: #ff8400;
+    }
+
+    body.dark .authenticate input[type="submit"]:hover,
+    body.dark .container input[type="submit"]:hover,
+    body.dark .threads-link:hover,
+    body.dark .input[type="submit"]:hover,
+    body.dark .delete-button button:hover,
+    body.dark .logout-button button:hover,
+    body.dark .admin-form button[type="submit"]:hover,
+    body.dark .comment-form input[type="submit"]:hover,
+    body.dark .search-button input[type="submit"]:hover,
+    body.dark .banner a:hover {
+        background-color: #b35900;
+    }
+
+    body.dark .like-checkbox:checked + .like-label:hover .thumb-up {
+        fill: #cc6a00;
+    }
+
+    body.dark tr:nth-of-type(even) {
+        background-color: #424242;
+    }
+
+    body.dark .title a {
+        color: #ff8400;
+    }
+
+        body.dark .title a:hover {
+            color: #b35900;
+        }
+
+/* Styles für Login, Registrierung und Passwortrücksetzung */
+.authenticate {
+    width: 300px;
+    margin: 20px auto 0;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    .authenticate input[type="text"],
+    .authenticate input[type=email],
+    .authenticate input[type="password"],
+    .authenticate input[type="submit"],
+    .container input[type="submit"],
+    .container input[type="text"],
+    .search-bar input[type="text"],
+    .admin-form input[type="text"],
+    .admin-form input[type="email"],
+    .admin-form input[type="password"],
+    textarea {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .authenticate input[type="submit"],
+    .container input[type="submit"],
+    .threads-link,
+    .comment-form input[type="submit"],
+    .banner a {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+        .container input[type="submit"]:hover,
+        .authenticate input[type="submit"]:hover,
+        .comment-form input[type="submit"]:hover,
+        .search-button input[type="submit"]:hover,
+        .admin-form button[type="submit"]:hover,
+        .delete-button button:hover,
+        .logout-button button:hover,
+        .threads-link:hover,
+        .banner a:hover {
+            background-color: #0056b3;
+        }
+
+    .authenticate a {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #007bff;
+    }
+
+.register-link{
+    display: inline-block;
+}
+
+.register-link:last-child {   
+    float: right;
+}
+
+    .register-link a:hover,
+    .login-link a:hover {
+        color: #0056b3; 
+    }
+
+/* Styles für die Hauptseite, die Threads und die Kommentare*/
+.thread,
+.comment {
+    position: relative;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.delete-button,
+.logout-button,
+.slider-position {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+    .delete-button button,
+    .logout-button button,
+    .admin-form button[type="submit"],
+    .admin-form button[type="button"],
+    .search-button input[type="submit"] {
+        padding: 4px 8px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+.logout-button {
+    margin-top: -5px;
+    margin-right: -5px;
+}
+
+.logout-button button{
+    height:35px;
+}
+
+.banner {
+    margin: 10px 0 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+    .title a {
+        font-size: 20px;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .title a:hover {
+        color: #0056b3;
+    }
+
+.post {
+    display: flex;
+    align-items: flex-start;
+}
+
+.image {
+    margin-right: 10px;
+    max-width: 200px;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+    .image img {
+        width: 100%;
+        height: auto;
+    }
+
+.text,
+.comment-text {
+    flex: 1;
+}
+
+.user_info,
+.comment-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: row;
+}
+
+.username,
+.comment-username {
+    font-weight: bold;
+}
+
+
+.timestamp,
+.comment-timestamp {
+    color: #777;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.comment-form,
+.comments p {
+    margin: 20px 0 -10px;
+    padding: 10px;
+}
+
+    .comment-form p,
+    .comments p {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .comment-form textarea {
+        width: 15%;
+        margin-top: -10px;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .comment-form form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .comment-form input[type="submit"] {
+        width: 5%;
+        margin-top: -5px;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+/* Styles für das Erstellen von Threads */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+.button-group {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.container input[type="submit"],
+.threads-link {
+    width: auto;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Styles für das Popup */
+.authenticationPopup {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+    .authenticationPopup .message {
+        flex-grow: 1;
+    }
+
+    .authenticationPopup .close-btn {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 0 10px;
+    }
+
+        .authenticationPopup .close-btn:hover {
+            color: #ff0000;
+        }
+
+/* Styles für den Theme-Slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 23px;
+}
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #007bff;
+    transition: .4s;
+    clip-path: inset(0 round 10px);
+}
+
+    .slider:before {
+        position: absolute;
+        content:"🌞";
+        height: 15px;
+        width: 15px;
+        left: 4px;
+        bottom: 5px;
+        transition: .4s;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        justify-content: center;
+    }
+
+input:checked + .slider {
+    background-color: #ff8400;
+}
+
+    input:checked + .slider:before {
+        transform: translateX(26px);
+        content:"🌚";
+    }
+
+
+.theme-slider {
+    margin-right: 90px;
+    margin-top: -10px;
+}
+
+/*Style für den Like-button*/
+.like-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.like-checkbox {
+    display: none;
+}
+
+/* Standardfarbe des SVG */
+.thumb-up {
+    fill: #808080;
+    transition: fill 0.3s;
+    cursor: pointer;
+}
+
+.like-label:hover .thumb-up {
+    fill: #666666;
+}
+
+/* Farbe des SVG, wenn die Checkbox aktiviert ist */
+.like-checkbox:checked + .like-label .thumb-up {
+    fill: #007bff; 
+}
+
+.like-checkbox:checked + .like-label:hover .thumb-up {
+    fill: #0056b3;
+}
+
+.like-count {
+    margin-left: 8px;
+}
+
+/*Style für Sear-Bar und Button*/
+.search-container {
+    position: absolute;
+    top: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex; 
+    gap: 10px;
+    align-items: center; 
+}
+
+.search-button {
+   margin-top: -10px;
+}
+
+.search-button input[type="submit"],
+.search-bar input[type="text"] {
+    height: 35px;
+}
+
+.clear-results{
+    margin-left: 45px;
+}
+
+/*Style für Adminlink*/
+.admin-link {
+    position : absolute;
+    left: 210px;
+}
+
+/* Admin-Seite Styles */
+.admin-table{
+    margin:20px 10px 0 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.admin-form {
+    display: flex;
+    align-items:center;
+    gap: 10px;
+}
+
+    .admin-form button[type="button"]{
+        height: 40px;
+    }
+
+    .admin-form input[type="email"],
+    .admin-form input[type="password"]{
+        margin-top: 10px;
+    }
+
+    th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #dddddd;
+    }
+
+th {
+    background-color: #007bff;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+form.update-button, form.delete-user-button {
+    margin: 0;
+}

@@ -1,0 +1,70 @@
+<?php
+	session_name("webeng_mwerr");
+	include_once("php/register.php");
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Anarchy Register</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" href="../icon/icon.png">
+	<script src="js/authenticationPopup.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/authenticationPopup.js"></script>
+</head>
+<body>
+	<?php
+	$errorMessage = "";
+	$popUpStyle = "display: none;";
+	if (isset($_POST['username'])){
+		registerUser();
+		if(isset($_POST['errorMessage'])){
+			$errorMessage = $_POST['errorMessage'];
+			$popUpStyle = "display: flex;";
+		}
+	}
+	?>
+	<div class="authenticate">
+		<h1>Register</h1>
+		<div class="slider-position">
+			<label class="switch">
+				<input type="checkbox" id="themeSwitch">
+				<span class="slider round"></span>
+			</label>
+		</div>
+		<form action="" method="post">
+			<p>
+				<label for="email"></label>
+				<input type="email" name="email" id="email" placeholder="E-Mail" maxlength="100" required>
+			</p>
+			<p>
+				<label for="username"> </label>
+				<input type="text" name="username" id="username" placeholder="Username" maxlength="50" required>
+					
+			</p>
+			<p>
+				<label for="password"></label>
+				<input type="password" name="password" id="password" placeholder="Password" required>
+			</p>
+			<p>
+				<label for="password2"></label>
+				<input type="password" name="password2" id="password2" placeholder="Repeat Password" required>
+			</p>
+			<p>
+			<input type="submit" value="Submit">
+			</p>
+		</form>
+		<div class="login-link">
+			<a href="index">back to login</a>
+		</div>
+	</div>
+
+	<div class="authenticationPopup" id="popup" style="<?php echo $popUpStyle; ?>">
+		<div class="message"><?php echo $errorMessage ?></div>
+		<button class="close-btn" onclick="closePopup()">×</button>
+	</div>
+	<script src="js/switchTheme.js"></script>
+</body>
+</html>
