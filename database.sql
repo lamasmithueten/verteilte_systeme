@@ -19,6 +19,7 @@
 -- Current Database: `web_eng`
 --
 
+GRANT all privileges on web_eng.* to 'web_eng_user'@'%';
 CREATE DATABASE /*!32312 IF NOT EXISTS*/ `web_eng` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 
 USE `web_eng`;
