@@ -4,8 +4,11 @@ services:
   webserver:
     image: webserver
     build: .
+    restart: unless-stopped
     ports:
       - 80:80
+    volumes:
+      - pictures:/var/www/html/pictures
     
 
   db:
@@ -22,3 +25,4 @@ services:
 
 volumes:
   db:
+  pictures:
