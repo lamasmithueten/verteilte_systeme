@@ -10,6 +10,7 @@ services:
 
   db:
     image: mariadb
+    hostname: mariadb
     restart: always
     volumes:
       - db:/var/lib/mysql
