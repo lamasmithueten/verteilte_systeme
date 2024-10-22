@@ -3,7 +3,7 @@ version: '3.1'
 services:
   traefik:
     image: traefik:v2.10  # Traefik image version
-    restart: unless-stopped
+#    restart: unless-stopped
     command:
       - "--api.insecure=true"                        
       - "--providers.docker=true"                     
@@ -13,11 +13,18 @@ services:
       - "8080:8080"                                   
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"   
+    depends_on:
+      db:
+        condition: service_healthy
+        restart: true
+      webserver:
+        condition: service_healthy
+        restart: true
 
   webserver:
     image: webserver
     build: .
-    restart: unless-stopped
+#    restart: unless-stopped
 #    ports:
 #      - 80:80
     volumes:
@@ -31,6 +38,16 @@ services:
       DATABASE_HOST: mariadb
       DATABASE_PASS: linux
       DATABASE_NAME: web_eng
+    depends_on:
+      db:
+        condition: service_healthy
+        restart: true
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
     
 
   db:
@@ -44,6 +61,12 @@ services:
       MARIADB_USER: web_eng_user
       MARIADB_PASSWORD: linux
       MYSQL_ROOT_PASSWORD: example
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
 
 volumes:
   db:
