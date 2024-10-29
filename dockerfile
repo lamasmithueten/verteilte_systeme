@@ -2,6 +2,8 @@ FROM php:8.1-apache
 
 COPY src/ /var/www/html
 
+RUN apt-get update && apt-get install -y msmtp && rm -rf /var/cache/apt/lists
+
 RUN mkdir /var/www/html/pictures
 
 RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
