@@ -38,6 +38,7 @@ services:
       DATABASE_HOST: mariadb
       DATABASE_PASS: linux
       DATABASE_NAME: web_eng
+      GMAIL_APP_PASSWORD: ${GMAIL_APP_PASSWORD}
     depends_on:
       db:
         condition: service_healthy
