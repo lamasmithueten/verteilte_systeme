@@ -7,12 +7,17 @@ services:
     command:
       - "--api.insecure=true"                        
       - "--providers.docker=true"                     
-      - "--entrypoints.web.address=:80"               
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"  # New TLS entrypoint
+      - "--providers.file.filename=/dynamic/traefik_dynamic.yml"  # Load dynamic config
     ports:
       - "80:80"                                       
+      - "443:443"                                      # Expose port 443 for HTTPS
       - "8080:8080"                                   
     volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"   
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./certs:/certs"  # Mount folder with certs
+      - "./traefik_dynamic.yml:/dynamic/traefik_dynamic.yml"  # Mount dynamic config
     depends_on:
       db:
         condition: service_healthy
@@ -31,8 +36,10 @@ services:
       - pictures:/var/www/html/pictures
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.webserver.rule=Host(`localhost`)"  
+      - "traefik.http.routers.webserver.rule=Host(`localhost`)"
       - "traefik.http.services.webserver.loadbalancer.server.port=80"
+      - "traefik.http.routers.webserver.entrypoints=web,websecure"  # Allow both HTTP and HTTPS
+      - "traefik.http.routers.webserver.tls=true"  # Enable TLS for this router
     environment:
       DATABASE_USER: web_eng_user
       DATABASE_HOST: mariadb
@@ -49,7 +56,6 @@ services:
       timeout: 5s
       retries: 3
       start_period: 10s
-    
 
   db:
     image: mariadb
