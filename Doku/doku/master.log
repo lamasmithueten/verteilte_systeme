@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.20)  20 DEC 2024 15:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.20)  20 DEC 2024 15:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1070,15 +1070,25 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              a package that still implements the
 (scrreprt)              deprecated \float@addtolist interface.
 
-)
+) (./chapter1.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.240 \cleardoublepage
-                       [1
+l.2 \chapter
+            {Docker als Softwarecontainer (Moritz Werr)} [1
 
 
+
+]
+chapter 2.
+
+Overfull \hbox (25.44763pt too wide) in paragraph at lines 4--6
+\T1/cmss/m/n/12 gegenüber tra-di-tioneller Vir-tu-al-isierung. Tra-di-tionelle 
+Vir-tu-al-isierung wird ver-wen-det um Ressourcen
+ []
+
+) [2
 
 ]
 chapter without number
@@ -1090,7 +1100,7 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
 39.
 (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [2
+) [3
 
 ]
 No file master.ind.
@@ -1099,26 +1109,17 @@ No file master.ind.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `master.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                master
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'master.run.xml'.
 \openout1 = `master.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28625 strings out of 476076
- 560857 string characters out of 5793774
+ 28651 strings out of 476076
+ 561483 string characters out of 5793774
  1938187 words of memory out of 5000000
- 50396 multiletter control sequences out of 15000+600000
+ 50416 multiletter control sequences out of 15000+600000
  567998 words of font info for 55 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  108i,19n,107p,10901b,1820s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1130,10 +1131,10 @@ m-super/sfss1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx120
 re/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/share/texmf-dist/f
 onts/type1/public/cm-super/sfsx2488.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/cm-super/sftt1200.pfb>
-Output written on master.pdf (5 pages, 261067 bytes).
+Output written on master.pdf (6 pages, 266584 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 131 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
+ 16 named destinations out of 1000 (max. 500000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

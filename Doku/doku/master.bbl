@@ -19,6 +19,93 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{fava_assessing_2024}{inproceedings}{}
+      \name{author}{9}{}{%
+        {{hash=c1949b14bcc6ef44c0145a2947bb607c}{%
+           family={Fava},
+           familyi={F\bibinitperiod},
+           given={Felipe\bibnamedelima Bedinotto},
+           giveni={F\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=35014acb4d878bed41e8970a74e82473}{%
+           family={Laviola\bibnamedelima Leite},
+           familyi={L\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Luiz\bibnamedelima Felipe},
+           giveni={L\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=dc559268ee3adf12e179487b9fd30c2e}{%
+           family={Da\bibnamedelima Silva},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Luís\bibnamedelimb Fernando\bibnamedelima Alves},
+           giveni={L\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=e83763dfcb5e36a48fdbaf8a63d5215c}{%
+           family={Da\bibnamedelima Silva\bibnamedelimb Amalfi\bibnamedelima Costa},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Pedro\bibnamedelima Ramires},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=deb46b6f4f029b8da53592b697fb0964}{%
+           family={Diniz\bibnamedelima Nogueira},
+           familyi={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Angelo\bibnamedelima Gaspar},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=9c2729becd90839aa2a72d7886122579}{%
+           family={Gobus\bibnamedelima Lopes},
+           familyi={G\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Amanda\bibnamedelima Fagundes},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=d1682df4a215aae1006ef19120ee9d57}{%
+           family={Schepke},
+           familyi={S\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a7eb09c6671ea2567362d8e66ff49472}{%
+           family={Kreutz},
+           familyi={K\bibinitperiod},
+           given={Diego\bibnamedelima Luis},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=17f67f9c802dca93f0a7ef0dc9e8353c}{%
+           family={Mansilha},
+           familyi={M\bibinitperiod},
+           given={Rodrigo\bibnamedelima Brãndao},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{59e81dfb455a266e3ccaec7d06034e3c}
+      \strng{fullhash}{da0a3ecf821f2dd1a949308b89852c12}
+      \strng{bibnamehash}{59e81dfb455a266e3ccaec7d06034e3c}
+      \strng{authorbibnamehash}{59e81dfb455a266e3ccaec7d06034e3c}
+      \strng{authornamehash}{59e81dfb455a266e3ccaec7d06034e3c}
+      \strng{authorfullhash}{da0a3ecf821f2dd1a949308b89852c12}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We provide a comprehensive and updated assessment of Docker versus Docker in Docker ({DinD}), evaluating its impact on {CPU}, memory, disk, and network. Using different workloads, we evaluate {DinD}'s performance across distinct hardware platforms and {GNU}/Linux distributions on cloud Infrastructure as a Service ({laaS}) platforms like Google Compute Engine ({GCE}) and traditional server-based environments. We developed an automated tools suite to achieve our goal. We execute four well-known benchmarks on Docker and its nested-container variant. Our findings indicate that nested-containers require up to 7 seconds for startup, while the Docker standard containers require less than 0.5 seconds for Debian and Alpine operating systems. Our results suggest that Docker containers based on Debian consistently outperform their Alpine counter-parts, showing lower {CPU} latency. A key distinction among these Docker images lies in the varying number of installed libraries (e.g., stretching from 13 to 119) across different Linux distributions for the same system (e.g., {MySQL}). Furthermore, the number of events and {CPU} latency indicates that the influence of {DinD} over Docker proves that it is insignificant for both operating systems. In terms of memory, running containers of Debian-based images consume 20\% more size of memory than those based on Alpine. No significant differences are between nested-containers and Dockers for disk and network {IO}. It is worth emphasizing that some of the disparities, such as a bigger memory footprint, appear to be a direct result of the software stack in use, including different kernel versions. libraries. and other essential packages.}
+      \field{booktitle}{2024 32nd Euromicro International Conference on Parallel, Distributed and Network-Based Processing ({PDP})}
+      \field{eventtitle}{2024 32nd Euromicro International Conference on Parallel, Distributed and Network-Based Processing ({PDP})}
+      \field{month}{3}
+      \field{note}{{ISSN}: 2377-5750}
+      \field{title}{Assessing the Performance of Docker in Docker Containers for Microservice-Based Architectures}
+      \field{urlday}{20}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{137\bibrangedash 142}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/PDP62718.2024.00026
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/werr/Zotero/storage/9LZHIHXN/Fava et al. - 2024 - Assessing the Performance of Docker in Docker Containers for Microservice-Based Architectures.pdf:application/pdf;IEEE Xplore Abstract Record:/home/werr/Zotero/storage/ZKBWRUC6/10495554.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10495554
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10495554
+      \endverb
+      \keyw{Benchmark testing,Benchmarks,Cloud Computing,Containers,{DinD},Docker Containers,Docker in Docker,Libraries,Linux,Memory management,Microservice architectures,Nested-container,Performance Evaluation,Reproducibility of results}
+    \endentry
     \entry{fowler_microservices_2015}{article}{}
       \name{author}{2}{}{%
         {{hash=312ac886938a9b2be4f8eb607567fe4c}{%
@@ -68,7 +155,6 @@
       \field{year}{100}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \true{nocite}
       \verb{file}
       \verb Snapshot:/home/werr/Zotero/storage/6VB6TYVI/services.html:text/html
       \endverb
