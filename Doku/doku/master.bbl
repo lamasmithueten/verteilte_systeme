@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.3 $
+% $ biblatex bbl format version 3.2 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,784 +18,181 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global/global}
-    \entry{noauthor_5_nodate}{online}{}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labeltitlesource}{title}
-      \field{abstract}{This chapter describes some things you’ve learned about already in more detail, and adds some new things as well. More on Lists: The list data type has some more methods. Here are all of the method...}
-      \field{langid}{english}
-      \field{title}{5. Data Structures}
-      \field{titleaddon}{Python documentation}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Phil\\Zotero\\storage\\TT7NP7KC\\datastructures.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://docs.python.org/3/tutorial/datastructures.html
-      \endverb
-      \verb{url}
-      \verb https://docs.python.org/3/tutorial/datastructures.html
-      \endverb
-    \endentry
-    \entry{noauthor_51_2024}{online}{}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labeltitlesource}{title}
-      \field{abstract}{5.1.\&nbsp;Table Basics \# A table in a relational database is much like a table on paper: It consists of rows …}
-      \field{day}{21}
-      \field{langid}{english}
-      \field{month}{11}
-      \field{title}{5.1. Table Basics}
-      \field{titleaddon}{{PostgreSQL} Documentation}
-      \field{urlday}{30}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
-      \field{year}{2024}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Phil\\Zotero\\storage\\XLHYHVC5\\ddl-basics.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.postgresql.org/docs/17/ddl-basics.html
-      \endverb
-      \verb{url}
-      \verb https://www.postgresql.org/docs/17/ddl-basics.html
-      \endverb
-    \endentry
-    \entry{adegeo_regular_2022}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=9ecd74085a04ef7487f1cde27f0a0cec}{%
-           family={adegeo},
-           familyi={a\bibinitperiod}}}%
-      }
-      \strng{namehash}{9ecd74085a04ef7487f1cde27f0a0cec}
-      \strng{fullhash}{9ecd74085a04ef7487f1cde27f0a0cec}
-      \strng{fullhashraw}{9ecd74085a04ef7487f1cde27f0a0cec}
-      \strng{bibnamehash}{9ecd74085a04ef7487f1cde27f0a0cec}
-      \strng{authorbibnamehash}{9ecd74085a04ef7487f1cde27f0a0cec}
-      \strng{authornamehash}{9ecd74085a04ef7487f1cde27f0a0cec}
-      \strng{authorfullhash}{9ecd74085a04ef7487f1cde27f0a0cec}
-      \strng{authorfullhashraw}{9ecd74085a04ef7487f1cde27f0a0cec}
-      \field{sortinit}{a}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{In this quick reference, learn to use regular expression patterns to match input text. A pattern has one or more character literals, operators, or constructs.}
-      \field{day}{18}
-      \field{langid}{english}
-      \field{month}{6}
-      \field{title}{Regular Expression Language - Quick Reference - .{NET}}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{year}{2022}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Phil\\Zotero\\storage\\GKAY45ML\\regular-expression-language-quick-reference.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference
-      \endverb
-      \verb{url}
-      \verb https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference
-      \endverb
-    \endentry
-    \entry{noauthor_awk1_nodate}{online}{}{}
-      \field{sortinit}{a}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labeltitlesource}{title}
-      \field{title}{awk(1): pattern scanning/processing - Linux man page}
-      \field{urlday}{28}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb awk(1)\: pattern scanning/processing - Linux man page:C\:\\Users\\Phil\\Zotero\\storage\\X63KIU3W\\awk.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://linux.die.net/man/1/awk
-      \endverb
-      \verb{url}
-      \verb https://linux.die.net/man/1/awk
-      \endverb
-    \endentry
-    \entry{chen_big_2014}{book}{}{}
-      \name{author}{4}{}{%
-        {{hash=fb194450e9046854896c4ca5f2dc8d01}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Min},
+  \datalist[entry]{nty/global//global/global}
+    \entry{fowler_microservices_2015}{article}{}
+      \name{author}{2}{}{%
+        {{hash=312ac886938a9b2be4f8eb607567fe4c}{%
+           family={Fowler},
+           familyi={F\bibinitperiod},
+           given={Martin},
            giveni={M\bibinitperiod}}}%
-        {{hash=f96ac342ca3c4d48bb3a476628f38ec7}{%
-           family={Mao},
-           familyi={M\bibinitperiod},
-           given={Shiwen},
-           giveni={S\bibinitperiod}}}%
-        {{hash=5d6038c292fe254b531b0db4830097e3}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Yin},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=8b4082936a45dafc0f71d542aad12350}{%
-           family={Leung},
+        {{hash=bc0d2dbdc2f0a7a80ec11019d6142dbb}{%
+           family={Lewis},
            familyi={L\bibinitperiod},
-           given={Victor\bibnamedelima C.M.},
-           giveni={V\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+           given={James},
+           giveni={J\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Cham}%
-      }
-      \list{publisher}{1}{%
-        {Springer International Publishing}%
-      }
-      \strng{namehash}{2eae75f66e5c3ec60399f4c040eab07c}
-      \strng{fullhash}{f1e814a937bf226e5f9523b4ee35274b}
-      \strng{fullhashraw}{f1e814a937bf226e5f9523b4ee35274b}
-      \strng{bibnamehash}{2eae75f66e5c3ec60399f4c040eab07c}
-      \strng{authorbibnamehash}{2eae75f66e5c3ec60399f4c040eab07c}
-      \strng{authornamehash}{2eae75f66e5c3ec60399f4c040eab07c}
-      \strng{authorfullhash}{f1e814a937bf226e5f9523b4ee35274b}
-      \strng{authorfullhashraw}{f1e814a937bf226e5f9523b4ee35274b}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \strng{namehash}{416876065d6eb7d05b219dfec144635d}
+      \strng{fullhash}{416876065d6eb7d05b219dfec144635d}
+      \strng{bibnamehash}{416876065d6eb7d05b219dfec144635d}
+      \strng{authorbibnamehash}{416876065d6eb7d05b219dfec144635d}
+      \strng{authornamehash}{416876065d6eb7d05b219dfec144635d}
+      \strng{authorfullhash}{416876065d6eb7d05b219dfec144635d}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{isbn}{978-3-319-06244-0 978-3-319-06245-7}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Objektspektrum}
+      \field{number}{2015}
+      \field{title}{Microservices: Nur ein weiteres Konzept in der Softwarearchitektur oder mehr}
+      \field{volume}{1}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{pages}{14\bibrangedash 20}
+      \range{pages}{7}
+      \verb{file}
+      \verb fowler_lewis_OTS_Architekturen_15.pdf:/home/werr/Zotero/storage/LAC9A4PS/fowler_lewis_OTS_Architekturen_15.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{noauthor_services_0100}{online}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Explore all the attributes the services top-level element can have.}
       \field{langid}{english}
-      \field{series}{{SpringerBriefs} in Computer Science}
-      \field{shorttitle}{Big Data}
-      \field{title}{Big Data: Related Technologies, Challenges and Future Prospects}
-      \field{urlday}{13}
-      \field{urlmonth}{11}
+      \field{title}{Services top-level elements}
+      \field{titleaddon}{Docker Documentation}
+      \field{urlday}{20}
+      \field{urlmonth}{12}
       \field{urlyear}{2024}
-      \field{year}{2014}
+      \field{year}{100}
       \field{dateera}{ce}
       \field{urldateera}{ce}
       \true{nocite}
-      \verb{doi}
-      \verb 10.1007/978-3-319-06245-7
-      \endverb
       \verb{file}
-      \verb PDF:C\:\\Users\\Phil\\Zotero\\storage\\MFSWYQXY\\Chen et al. - 2014 - Big Data Related Technologies, Challenges and Future Prospects.pdf:application/pdf
+      \verb Snapshot:/home/werr/Zotero/storage/6VB6TYVI/services.html:text/html
       \endverb
       \verb{urlraw}
-      \verb https://link.springer.com/10.1007/978-3-319-06245-7
+      \verb https://docs.docker.com/reference/compose-file/services/
       \endverb
       \verb{url}
-      \verb https://link.springer.com/10.1007/978-3-319-06245-7
+      \verb https://docs.docker.com/reference/compose-file/services/
       \endverb
     \endentry
-    \entry{noauthor_data_nodate}{online}{}{}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Learn what is data visualization in python and how to create customized data along with its libraries, graphs, charts, histogram and more. Keep on reading to know more!}
-      \field{langid}{american}
-      \field{shorttitle}{Data Visualization in Python}
-      \field{title}{Data Visualization in Python: Overview, Libraries \& Graphs {|} Simplilearn}
-      \field{titleaddon}{Simplilearn.com}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Phil\\Zotero\\storage\\889LJ97L\\data-visualization-in-python.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.simplilearn.com/tutorials/python-tutorial/data-visualization-in-python
-      \endverb
-      \verb{url}
-      \verb https://www.simplilearn.com/tutorials/python-tutorial/data-visualization-in-python
-      \endverb
-    \endentry
-    \entry{ewendorf_algorithmic_2019}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=d654abc0bb0e79819d1edfa19b49805d}{%
-           family={ewendorf},
-           familyi={e\bibinitperiod}}}%
+    \entry{su_modular_2024}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=1ef4d29b27f6816ca44986f0a2074dfa}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={Ruoyu},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a6b86154c32efdc6df26d990392dc07c}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Xiaozhou},
+           giveni={X\bibinitperiod}}}%
       }
-      \strng{namehash}{d654abc0bb0e79819d1edfa19b49805d}
-      \strng{fullhash}{d654abc0bb0e79819d1edfa19b49805d}
-      \strng{fullhashraw}{d654abc0bb0e79819d1edfa19b49805d}
-      \strng{bibnamehash}{d654abc0bb0e79819d1edfa19b49805d}
-      \strng{authorbibnamehash}{d654abc0bb0e79819d1edfa19b49805d}
-      \strng{authornamehash}{d654abc0bb0e79819d1edfa19b49805d}
-      \strng{authorfullhash}{d654abc0bb0e79819d1edfa19b49805d}
-      \strng{authorfullhashraw}{d654abc0bb0e79819d1edfa19b49805d}
-      \field{sortinit}{e}
-      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \strng{namehash}{90b5ab3d052cd791a57b986fe8c8ae52}
+      \strng{fullhash}{90b5ab3d052cd791a57b986fe8c8ae52}
+      \strng{bibnamehash}{90b5ab3d052cd791a57b986fe8c8ae52}
+      \strng{authorbibnamehash}{90b5ab3d052cd791a57b986fe8c8ae52}
+      \strng{authornamehash}{90b5ab3d052cd791a57b986fe8c8ae52}
+      \strng{authorfullhash}{90b5ab3d052cd791a57b986fe8c8ae52}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Get an extensive introduction into the python programming language!}
-      \field{day}{24}
-      \field{langid}{american}
+      \field{abstract}{Recently, modular monolith architecture has attracted the attention of practitioners, as Google proposed a "Service Weaver" framework to enable developers to write applications as modular monolithic and deploy them as a set of microservices. Google considered it a framework with the best of both worlds, and it seems to be a trend in software architecture. This paper aims to understand the definition of the modular monolith in industry and investigate frameworks and cases building modular monolith architecture. We conducted a systematic grey literature review, and the results show that modular monolith combines the advantages of monoliths with microservices. We found three frameworks and four cases of building modular monolith architecture. In general, the modular monolith is an alternative way to microservices, and it also could be a previous step before systems migrate to microservices.}
+      \field{booktitle}{2024 {IEEE}/{ACM} International Workshop New Trends in Software Architecture ({SATrends})}
+      \field{eventtitle}{2024 {IEEE}/{ACM} International Workshop New Trends in Software Architecture ({SATrends})}
       \field{month}{4}
-      \field{shorttitle}{The Algorithmic Expert’s Tool}
-      \field{title}{The Algorithmic Expert’s Tool: An introduction to the Python programming language}
-      \field{titleaddon}{{ML} Conference}
-      \field{urlday}{30}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
-      \field{year}{2019}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Phil\\Zotero\\storage\\QV76EQPZ\\introduction-to-the-r-programming-language.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://mlconference.ai/blog/introduction-to-the-r-programming-language/
-      \endverb
-      \verb{url}
-      \verb https://mlconference.ai/blog/introduction-to-the-r-programming-language/
-      \endverb
-    \endentry
-    \entry{noauthor_example_nodate}{online}{}{}
-      \field{sortinit}{E}
-      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
-      \field{labeltitlesource}{title}
-      \field{title}{Example gallery — seaborn 0.13.2 documentation}
-      \field{urlday}{1}
+      \field{shorttitle}{Modular Monolith}
+      \field{title}{Modular Monolith: Is This the Trend in Software Architecture?}
+      \field{urlday}{20}
       \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Example gallery — seaborn 0.13.2 documentation:C\:\\Users\\Phil\\Zotero\\storage\\LK8DB7WP\\index.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://seaborn.pydata.org/examples/index.html
-      \endverb
-      \verb{url}
-      \verb https://seaborn.pydata.org/examples/index.html
-      \endverb
-    \endentry
-    \entry{i7_intel_2024}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=1ba3b416ad5408db4097bdd750e449b2}{%
-           family={I7},
-           familyi={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{1ba3b416ad5408db4097bdd750e449b2}
-      \strng{fullhash}{1ba3b416ad5408db4097bdd750e449b2}
-      \strng{fullhashraw}{1ba3b416ad5408db4097bdd750e449b2}
-      \strng{bibnamehash}{1ba3b416ad5408db4097bdd750e449b2}
-      \strng{authorbibnamehash}{1ba3b416ad5408db4097bdd750e449b2}
-      \strng{authornamehash}{1ba3b416ad5408db4097bdd750e449b2}
-      \strng{authorfullhash}{1ba3b416ad5408db4097bdd750e449b2}
-      \strng{authorfullhashraw}{1ba3b416ad5408db4097bdd750e449b2}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Produkte vergleichen}
-      \field{day}{4}
-      \field{langid}{german}
-      \field{month}{11}
-      \field{title}{Intel Core i7 Generation 4 bis 14}
-      \field{titleaddon}{i7}
-      \field{urlday}{4}
-      \field{urlmonth}{11}
       \field{urlyear}{2024}
       \field{year}{2024}
       \field{dateera}{ce}
       \field{urldateera}{ce}
+      \field{pages}{10\bibrangedash 13}
+      \range{pages}{4}
       \verb{file}
-      \verb Intel_UPE_ComparisonChart_2024_11_04_i7:C\:\\Users\\Phil\\Zotero\\storage\\6JEX96KG\\Intel_UPE_ComparisonChart_2024_11_04_i7.csv:text/csv;Snapshot:C\:\\Users\\Phil\\Zotero\\storage\\MJG77FJU\\compare.html:text/html
+      \verb Full Text PDF:/home/werr/Zotero/storage/NJ7NVYRE/Su und Li - 2024 - Modular Monolith Is This the Trend in Software Architecture.pdf:application/pdf;IEEE Xplore Abstract Record:/home/werr/Zotero/storage/YBFXZW92/10669865.html:text/html
       \endverb
       \verb{urlraw}
-      \verb https://www.intel.de/content/www/de/de/products/compare.html?productIds=212279,212280,212047,212048,212251,199325,199335,199314,199316,199318,191048,191792,193738,190885,186604,148263,140642,126684,97129,93339,88200,88195,87718,88040,80807,80808,80809,80814,80806,77656,76642,75121,75122,75123,75124,75125,236781,236794,236854,236783,236789,230492,230490,230491,230500,230489,134596,134591,134592,134594,134595,129948,126686,97122,97128,88196
+      \verb https://ieeexplore.ieee.org/document/10669865
       \endverb
       \verb{url}
-      \verb https://www.intel.de/content/www/de/de/products/compare.html?productIds=212279,212280,212047,212048,212251,199325,199335,199314,199316,199318,191048,191792,193738,190885,186604,148263,140642,126684,97129,93339,88200,88195,87718,88040,80807,80808,80809,80814,80806,77656,76642,75121,75122,75123,75124,75125,236781,236794,236854,236783,236789,230492,230490,230491,230500,230489,134596,134591,134592,134594,134595,129948,126686,97122,97128,88196
+      \verb https://ieeexplore.ieee.org/document/10669865
       \endverb
+      \keyw{Architecture,Bibliographies,Buildings,Computer architecture,Microservice architectures,microservices,modular monolith,software architecture,Software architecture,software engineering,systematic grey literature review,Systematics}
     \endentry
-    \entry{noauthor_janitor_nodate}{online}{}{}
-      \field{sortinit}{j}
-      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
-      \field{labeltitlesource}{title}
-      \field{title}{janitor package - {RDocumentation}}
-      \field{urlday}{28}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb janitor package - RDocumentation:C\:\\Users\\Phil\\Zotero\\storage\\PEBPINRZ\\2.2.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.rdocumentation.org/packages/janitor/versions/2.2.0
-      \endverb
-      \verb{url}
-      \verb https://www.rdocumentation.org/packages/janitor/versions/2.2.0
-      \endverb
-    \endentry
-    \entry{marjani_big_2017}{article}{}{}
-      \name{author}{7}{}{%
-        {{hash=ce399e4c7ea32b93bed5d4c8f9080797}{%
-           family={Marjani},
-           familyi={M\bibinitperiod},
-           given={Mohsen},
-           giveni={M\bibinitperiod}}}%
-        {{hash=df66860dbbf9552ca56e5d7a6025f1f2}{%
-           family={Nasaruddin},
-           familyi={N\bibinitperiod},
-           given={Fariza},
-           giveni={F\bibinitperiod}}}%
-        {{hash=12a2bdd5a21b830affa3f042add044de}{%
-           family={Gani},
-           familyi={G\bibinitperiod},
-           given={Abdullah},
-           giveni={A\bibinitperiod}}}%
-        {{hash=5d86481c6d02c4ad331865ea1ad22e96}{%
-           family={Karim},
-           familyi={K\bibinitperiod},
-           given={Ahmad},
-           giveni={A\bibinitperiod}}}%
-        {{hash=3db72b28ca88d09572cce78216bd22f0}{%
-           family={Hashem},
-           familyi={H\bibinitperiod},
-           given={Ibrahim\bibnamedelimb Abaker\bibnamedelima Targio},
-           giveni={I\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
-        {{hash=d79a3b0735def6e1383425b996584716}{%
-           family={Siddiqa},
-           familyi={S\bibinitperiod},
-           given={Aisha},
-           giveni={A\bibinitperiod}}}%
-        {{hash=446d935cc3981c652f747abe3a5227f0}{%
-           family={Yaqoob},
-           familyi={Y\bibinitperiod},
-           given={Ibrar},
-           giveni={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{f7a5a63ea20af3de3a9f93340a6dee63}
-      \strng{fullhash}{95efcb086381a8057712d763d31d6596}
-      \strng{fullhashraw}{95efcb086381a8057712d763d31d6596}
-      \strng{bibnamehash}{f7a5a63ea20af3de3a9f93340a6dee63}
-      \strng{authorbibnamehash}{f7a5a63ea20af3de3a9f93340a6dee63}
-      \strng{authornamehash}{f7a5a63ea20af3de3a9f93340a6dee63}
-      \strng{authorfullhash}{95efcb086381a8057712d763d31d6596}
-      \strng{authorfullhashraw}{95efcb086381a8057712d763d31d6596}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Voluminous amounts of data have been produced, since the past decade as the miniaturization of Internet of things ({IoT}) devices increases. However, such data are not useful without analytic power. Numerous big data, {IoT}, and analytics solutions have enabled people to obtain valuable insight into large data generated by {IoT} devices. However, these solutions are still in their infancy, and the domain lacks a comprehensive survey. This paper investigates the state-of-the-art research efforts directed toward big {IoT} data analytics. The relationship between big data analytics and {IoT} is explained. Moreover, this paper adds value by proposing a new architecture for big {IoT} data analytics. Furthermore, big {IoT} data analytic types, methods, and technologies for big data mining are discussed. Numerous notable use cases are also presented. Several opportunities brought by data analytics in {IoT} paradigm are then discussed. Finally, open research challenges, such as privacy, big data mining, visualization, and integration, are presented as future research directions.}
-      \field{issn}{2169-3536}
-      \field{journaltitle}{{IEEE} Access}
-      \field{note}{Conference Name: {IEEE} Access}
-      \field{shorttitle}{Big {IoT} Data Analytics}
-      \field{title}{Big {IoT} Data Analytics: Architecture, Opportunities, and Open Research Challenges}
-      \field{urlday}{13}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
-      \field{volume}{5}
-      \field{year}{2017}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \field{pages}{5247\bibrangedash 5261}
-      \range{pages}{15}
-      \verb{doi}
-      \verb 10.1109/ACCESS.2017.2689040
-      \endverb
-      \verb{file}
-      \verb Full Text PDF:C\:\\Users\\Phil\\Zotero\\storage\\FD77XNDJ\\Marjani et al. - 2017 - Big IoT Data Analytics Architecture, Opportunities, and Open Research Challenges.pdf:application/pdf;IEEE Xplore Abstract Record:C\:\\Users\\Phil\\Zotero\\storage\\QLHI8GAC\\7888916.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/abstract/document/7888916
-      \endverb
-      \verb{url}
-      \verb https://ieeexplore.ieee.org/abstract/document/7888916
-      \endverb
-      \keyw{Big data,Tools,Big Data,Business,Computer architecture,Data analysis,data analytics,Data mining,distributed computing,Internet of Things,Sensors,smart city}
-    \endentry
-    \entry{noauthor_matplotlib_nodate}{online}{}{}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labeltitlesource}{title}
-      \field{title}{Matplotlib — Visualization with Python}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Matplotlib — Visualization with Python:C\:\\Users\\Phil\\Zotero\\storage\\33LEW4CX\\matplotlib.org.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://matplotlib.org/
-      \endverb
-      \verb{url}
-      \verb https://matplotlib.org/
-      \endverb
-    \endentry
-    \entry{noauthor_microsoft_nodate}{online}{}{}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labeltitlesource}{title}
-      \field{title}{Microsoft {SQL} Server System Properties}
-      \field{urlday}{30}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Microsoft SQL Server System Properties:C\:\\Users\\Phil\\Zotero\\storage\\YZ486778\\Microsoft+SQL+Server.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://db-engines.com/en/system/Microsoft+SQL+Server
-      \endverb
-      \verb{url}
-      \verb https://db-engines.com/en/system/Microsoft+SQL+Server
-      \endverb
-    \endentry
-    \entry{noauthor_most_nodate}{online}{}{}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The statistic displays the most wanted data science skills in the United States as of April 2019.}
-      \field{langid}{english}
-      \field{title}{Most wanted data science skills U.S. 2019}
-      \field{titleaddon}{Statista}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Phil\\Zotero\\storage\\VCKEHZV4\\united-states-wanted-data-science-skills.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.statista.com/statistics/1016247/united-states-wanted-data-science-skills/
-      \endverb
-      \verb{url}
-      \verb https://www.statista.com/statistics/1016247/united-states-wanted-data-science-skills/
-      \endverb
-    \endentry
-    \entry{noauthor_mysql_nodate}{online}{}{}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labeltitlesource}{title}
-      \field{title}{{MySQL} System Properties}
-      \field{urlday}{30}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb MySQL System Properties:C\:\\Users\\Phil\\Zotero\\storage\\66ZNP7SQ\\MySQL.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://db-engines.com/en/system/MySQL
-      \endverb
-      \verb{url}
-      \verb https://db-engines.com/en/system/MySQL
-      \endverb
-    \endentry
-    \entry{noauthor_oracle_nodate}{online}{}{}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{labeltitlesource}{title}
-      \field{title}{Oracle System Properties}
-      \field{urlday}{30}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Oracle System Properties:C\:\\Users\\Phil\\Zotero\\storage\\C29PHLBJ\\Oracle.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://db-engines.com/en/system/Oracle
-      \endverb
-      \verb{url}
-      \verb https://db-engines.com/en/system/Oracle
-      \endverb
-    \endentry
-    \entry{noauthor_orm_nodate}{online}{}{}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{labeltitlesource}{title}
-      \field{title}{{ORM} Quick Start — {SQLAlchemy} 2.0 Documentation}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb ORM Quick Start — SQLAlchemy 2.0 Documentation:C\:\\Users\\Phil\\Zotero\\storage\\23TVYCFP\\quickstart.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://docs.sqlalchemy.org/en/20/orm/quickstart.html
-      \endverb
-      \verb{url}
-      \verb https://docs.sqlalchemy.org/en/20/orm/quickstart.html
-      \endverb
-    \endentry
-    \entry{noauthor_pandas_nodate}{online}{}{}
-      \field{sortinit}{p}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labeltitlesource}{title}
-      \field{title}{pandas - Python Data Analysis Library}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb pandas - Python Data Analysis Library:C\:\\Users\\Phil\\Zotero\\storage\\H6ZQWS7M\\pandas.pydata.org.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://pandas.pydata.org/
-      \endverb
-      \verb{url}
-      \verb https://pandas.pydata.org/
-      \endverb
-    \endentry
-    \entry{noauthor_pandasdataframe_nodate}{online}{}{}
-      \field{sortinit}{p}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labeltitlesource}{title}
-      \field{title}{pandas.{DataFrame} — pandas 2.2.3 documentation}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb pandas.DataFrame — pandas 2.2.3 documentation:C\:\\Users\\Phil\\Zotero\\storage\\KY7R25NY\\pandas.DataFrame.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame
-      \endverb
-      \verb{url}
-      \verb https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame
-      \endverb
-    \endentry
-    \entry{noauthor_plot_nodate}{online}{}{}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labeltitlesource}{title}
-      \field{title}{Plot types — Matplotlib 3.9.3 documentation}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Plot types — Matplotlib 3.9.3 documentation:C\:\\Users\\Phil\\Zotero\\storage\\EAS77XXK\\index.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://matplotlib.org/stable/plot_types/index.html
-      \endverb
-      \verb{url}
-      \verb https://matplotlib.org/stable/plot_types/index.html
-      \endverb
-    \endentry
-    \entry{noauthor_popular_nodate}{online}{}{}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labeltitlesource}{title}
-      \field{abstract}{A tech stack represents a combination of technologies a company uses in order to build and run an application or project.}
-      \field{langid}{english}
-      \field{title}{Popular technologies in the data science tech stack 2024}
-      \field{titleaddon}{Statista}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Phil\\Zotero\\storage\\NX5Q6NLP\\popular-technologies-in-the-data-science-tech-stack.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.statista.com/statistics/1292394/popular-technologies-in-the-data-science-tech-stack/
-      \endverb
-      \verb{url}
-      \verb https://www.statista.com/statistics/1292394/popular-technologies-in-the-data-science-tech-stack/
-      \endverb
-    \endentry
-    \entry{noauthor_postgresql_nodate-1}{online}{}{}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labeltitlesource}{title}
-      \field{title}{{PostgreSQL} System Properties}
-      \field{urlday}{30}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb PostgreSQL System Properties:C\:\\Users\\Phil\\Zotero\\storage\\8X75WF6U\\PostgreSQL.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://db-engines.com/en/system/PostgreSQL
-      \endverb
-      \verb{url}
-      \verb https://db-engines.com/en/system/PostgreSQL
-      \endverb
-    \endentry
-    \entry{noauthor_postgresql_nodate}{online}{}{}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labeltitlesource}{title}
-      \field{title}{{PostgreSQL}: About}
-      \field{urlday}{30}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb PostgreSQL\: About:C\:\\Users\\Phil\\Zotero\\storage\\CDJ7PDPU\\about.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.postgresql.org/about/
-      \endverb
-      \verb{url}
-      \verb https://www.postgresql.org/about/
-      \endverb
-    \endentry
-    \entry{noauthor_python_nodate}{online}{}{}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The official home of the Python Programming Language}
-      \field{langid}{english}
-      \field{title}{Python Release Python 3.12.7}
-      \field{titleaddon}{Python.org}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Phil\\Zotero\\storage\\7YPFNFDM\\python-3127.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.python.org/downloads/release/python-3127/
-      \endverb
-      \verb{url}
-      \verb https://www.python.org/downloads/release/python-3127/
-      \endverb
-    \endentry
-    \entry{noauthor_python-dotenv_nodate}{software}{}{}
-      \field{sortinit}{p}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labeltitlesource}{shorttitle}
-      \field{shorttitle}{python-dotenv}
-      \field{title}{python-dotenv: Read key-value pairs from a .env file and set them as environment variables}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{version}{1.0.1}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Phil\\Zotero\\storage\\B6XLKTQF\\python-dotenv.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://github.com/theskumar/python-dotenv
-      \endverb
-      \verb{url}
-      \verb https://github.com/theskumar/python-dotenv
-      \endverb
-      \keyw{configurations,,deployments,,dotenv,,env,,environment variables,,python,settings,,System - Systems Administration,Utilities}
-    \endentry
-    \entry{noauthor_r_nodate}{online}{}{}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{labeltitlesource}{title}
-      \field{title}{R: What is R?}
-      \field{urlday}{28}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb R\: What is R?:C\:\\Users\\Phil\\Zotero\\storage\\GURS6QAD\\about.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.r-project.org/about.html
-      \endverb
-      \verb{url}
-      \verb https://www.r-project.org/about.html
-      \endverb
-    \endentry
-    \entry{noauthor_sqlalchemy_nodate}{online}{}{}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The Database Toolkit for Python}
-      \field{langid}{english}
-      \field{title}{{SQLAlchemy}}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Phil\\Zotero\\storage\\QPQ7U4ER\\www.sqlalchemy.org.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sqlalchemy.org
-      \endverb
-      \verb{url}
-      \verb https://www.sqlalchemy.org
-      \endverb
-    \endentry
-    \entry{noauthor_sqlite_nodate}{online}{}{}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labeltitlesource}{title}
-      \field{title}{{SQLite} System Properties}
-      \field{urlday}{30}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://db-engines.com/en/system/SQLite
-      \endverb
-      \verb{url}
-      \verb https://db-engines.com/en/system/SQLite
-      \endverb
-    \endentry
-    \entry{waskom_seaborn_2021}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=9f118467e509f7d2d04cfbdb8d33accf}{%
-           family={Waskom},
+    \entry{watada_emerging_2019}{article}{}
+      \name{author}{5}{}{%
+        {{hash=ffc628749ff20893a8449ed6b290bfe4}{%
+           family={Watada},
            familyi={W\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
+           given={Junzo},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3716019f870523c6dede993ff11ad77e}{%
+           family={Roy},
+           familyi={R\bibinitperiod},
+           given={Arunava},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b0ca36dc886682a7d9adb8df8ed61a3d}{%
+           family={Kadikar},
+           familyi={K\bibinitperiod},
+           given={Ruturaj},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f1cacd0a51fe343b269c5b8b6123071f}{%
+           family={Pham},
+           familyi={P\bibinitperiod},
+           given={Hoang},
+           giveni={H\bibinitperiod}}}%
+        {{hash=743dd6cdaa6639320289d219d351d7b7}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Bing},
+           giveni={B\bibinitperiod}}}%
       }
-      \strng{namehash}{9f118467e509f7d2d04cfbdb8d33accf}
-      \strng{fullhash}{9f118467e509f7d2d04cfbdb8d33accf}
-      \strng{fullhashraw}{9f118467e509f7d2d04cfbdb8d33accf}
-      \strng{bibnamehash}{9f118467e509f7d2d04cfbdb8d33accf}
-      \strng{authorbibnamehash}{9f118467e509f7d2d04cfbdb8d33accf}
-      \strng{authornamehash}{9f118467e509f7d2d04cfbdb8d33accf}
-      \strng{authorfullhash}{9f118467e509f7d2d04cfbdb8d33accf}
-      \strng{authorfullhashraw}{9f118467e509f7d2d04cfbdb8d33accf}
+      \strng{namehash}{9464c1ccca192e57b7cd1e4b9fa184a7}
+      \strng{fullhash}{10e55673f48ccd2ed92afa4ff92fe33c}
+      \strng{bibnamehash}{9464c1ccca192e57b7cd1e4b9fa184a7}
+      \strng{authorbibnamehash}{9464c1ccca192e57b7cd1e4b9fa184a7}
+      \strng{authornamehash}{9464c1ccca192e57b7cd1e4b9fa184a7}
+      \strng{authorfullhash}{10e55673f48ccd2ed92afa4ff92fe33c}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
-      \field{day}{6}
-      \field{issn}{2475-9066}
-      \field{journaltitle}{Journal of Open Source Software}
-      \field{month}{4}
-      \field{number}{60}
-      \field{shortjournal}{{JOSS}}
-      \field{shorttitle}{seaborn}
-      \field{title}{seaborn: statistical data visualization}
-      \field{urlday}{1}
+      \field{abstract}{Containerization is revolutionizing the way that many industries operate, provisioning major impact to modern computing technologies because it is extra lightweight, highly portable, energy, resource and storage efficient, cost-effective, performance efficient, and extremely quick during boot up. These often facilitate efficient load balancing, low-level system maintenance, server consolidation (for efficient energy and resource utilization) and replication of instances over geographical locations for better fault tolerance to escalate application reliability. However, some recent literature have addressed various challenges (such as complex networking, persistent storage facilities, cross data centers and multicloud supports, security issues, and lack of available, capable container management {APIs}, etc.) regarding successful container adoption in industries, which might have resulted in a seemingly meager increase in industrial deployments of containerization over the past few years despite bestowing efficient lightweight virtualization. Moreover, a comprehensive overview of containerizations along with their popularity dynamics has still not been found in contemporary literature, which further extends knowledge gap between developers and available technologies. Hence, current study touches upon different technicalities involved in containerization with potential problems and possible solutions along with various important industrial applications to manifest its existing supports and technical hardships. Finally, we have conducted a comprehensive experimental study to compare the performance of {VMs}, containers and unikernels in terms of {CPU} utilization, memory footprints, network bandwidth, execution time and technological maturity using standard benchmarks and observed containers to deliver satisfactory performance in almost all aspects, however, are still not free from issues regarding isolation \& security, performance stability, lack of available efficient tools for crossplatform support and persistent storage. Unikernels deliver good performance with {VM}-like isolation but still need to achieve desired technical maturity (in terms of microprocessor stability, process containment, persistent storage, etc.). {VMs}, on the other hand, are found to provide stable performance throughout, though bigger memory footprints and slower spin up/down remain their biggest weaknesses.}
+      \field{issn}{2169-3536}
+      \field{journaltitle}{{IEEE} Access}
+      \field{note}{Conference Name: {IEEE} Access}
+      \field{shorttitle}{Emerging Trends, Techniques and Open Issues of Containerization}
+      \field{title}{Emerging Trends, Techniques and Open Issues of Containerization: A Review}
+      \field{urlday}{20}
       \field{urlmonth}{12}
       \field{urlyear}{2024}
-      \field{volume}{6}
-      \field{year}{2021}
+      \field{volume}{7}
+      \field{year}{2019}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \field{pages}{3021}
-      \range{pages}{1}
+      \field{pages}{152443\bibrangedash 152472}
+      \range{pages}{30}
       \verb{doi}
-      \verb 10.21105/joss.03021
+      \verb 10.1109/ACCESS.2019.2945930
       \endverb
       \verb{file}
-      \verb Volltext:C\:\\Users\\Phil\\Zotero\\storage\\PBWKXXMF\\Waskom - 2021 - seaborn statistical data visualization.pdf:application/pdf
+      \verb Full Text PDF:/home/werr/Zotero/storage/29ZGL4TG/Watada et al. - 2019 - Emerging Trends, Techniques and Open Issues of Containerization A Review.pdf:application/pdf;IEEE Xplore Abstract Record:/home/werr/Zotero/storage/LL37AZP4/8861307.html:text/html
       \endverb
       \verb{urlraw}
-      \verb https://joss.theoj.org/papers/10.21105/joss.03021
+      \verb https://ieeexplore.ieee.org/abstract/document/8861307
       \endverb
       \verb{url}
-      \verb https://joss.theoj.org/papers/10.21105/joss.03021
+      \verb https://ieeexplore.ieee.org/abstract/document/8861307
       \endverb
+      \keyw{Cloud computing,containerization,Containers,isolation and security,Linux,management and orchestration,Security,Tools,Virtual machine monitors,Virtualization}
     \endentry
   \enddatalist
 \endrefsection

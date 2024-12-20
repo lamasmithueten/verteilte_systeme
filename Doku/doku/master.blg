@@ -1,17 +1,15 @@
-[0] Config.pm:308> INFO - This is Biber 2.20
-[0] Config.pm:311> INFO - Logfile is 'master.blg'
-[127] biber-MSWIN64:340> INFO - === 
-[169] Biber.pm:420> INFO - Reading 'master.bcf'
-[286] Biber.pm:991> INFO - Using all citekeys in bib section 0
-[298] Biber.pm:4463> INFO - Processing section 0
-[310] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[386] bibtex.pm:1713> INFO - LaTeX decoding ...
-[421] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[524] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[524] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[524] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[525] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[544] bbl.pm:676> INFO - Writing 'master.bbl' with encoding 'UTF-8'
-[556] bbl.pm:779> INFO - Output to master.bbl
-[556] Biber.pm:131> WARN - ISBN '978-3-319-06244-0 978-3-319-06245-7' in entry 'chen_big_2014' is invalid - run biber with '--validate_datamodel' for details.
-[556] Biber.pm:133> INFO - WARNINGS: 1
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'master.blg'
+[62] biber:340> INFO - === Fr Dez 20, 2024, 15:08:38
+[74] Biber.pm:419> INFO - Reading 'master.bcf'
+[126] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[139] Biber.pm:4419> INFO - Processing section 0
+[146] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[147] bibtex.pm:1713> INFO - LaTeX decoding ...
+[155] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[197] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[197] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[197] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[197] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[203] bbl.pm:660> INFO - Writing 'master.bbl' with encoding 'UTF-8'
+[205] bbl.pm:763> INFO - Output to master.bbl
