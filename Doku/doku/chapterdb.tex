@@ -1,0 +1,44 @@
+\chapter{Datenbank (Max Stege)}
+
+Die Datenbank ist eine der zentralen Komponenten der Drei-Schichten-Architektur. In diesem Projekt wurde MariaDB als Datenbankserver eingesetzt, der mithilfe von Docker Compose als eigenständiger Container betrieben wird. Die Konfiguration des Datenbankdienstes in der Docker-Compose-Datei sieht wie folgt aus:
+
+\lstset{
+breaklines=true,         % Enable line wrapping
+breakatwhitespace=false, % Allow breaks at any character (not just whitespace)
+basicstyle=\ttfamily,    % Use monospaced font
+}
+
+\begin{lstlisting}[caption={\texttt{docker-compose.yml}},captionpos=b]
+db:
+    image: mariadb
+    hostname: mariadb
+    restart: always
+    volumes:
+      - db:/var/lib/mysql
+      - ./database.sql:/docker-entrypoint-initdb.d/database.sql
+    environment:
+      MARIADB_USER: web_eng_user
+      MARIADB_PASSWORD: linux
+      MYSQL_ROOT_PASSWORD: example
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
+\end{lstlisting}
+
+Der Datenbankcontainer verwendet das MariaDB-Image, ein populäres und performantes Open-Source-Datenbankmanagementsystem \cite{mariadb_docs}. Der Hostname des Containers wird explizit auf \texttt{mariadb} gesetzt, um eine klare Identifikation im Docker-Netzwerk zu ermöglichen. Das Volumemapping \texttt{db:/var/lib/mysql} sorgt dafür, dass die Datenbank persistent bleibt und bei einem Neustart des Containers erhalten bleibt \cite{docker_persistence}. Zusätzlich wird ein SQL-Skript \texttt{database.sql} eingebunden, das die initiale Struktur der Datenbank definiert.
+
+Um die Datenbank zu konfigurieren, werden verschiedene Umgebungsvariablen definiert:
+\begin{itemize}
+\item \texttt{MARIADB\_USER}: Der Benutzername für den Datenbankzugriff.
+\item \texttt{MARIADB\_PASSWORD}: Das Passwort für den definierten Benutzer.
+\item \texttt{MYSQL\_ROOT\_PASSWORD}: Das Passwort für den Root-Benutzer der Datenbank.
+\end{itemize}
+
+Diese Variablen ermöglichen eine flexible Anpassung der Datenbankkonfiguration, ohne Änderungen am Containerimage vorzunehmen \cite{environment_variables}.
+
+Ein Healthcheck wird definiert, um sicherzustellen, dass die Datenbank ordnungsgemäß funktioniert. Der Test prüft, ob die Datenbank erreichbar ist und ob das InnoDB-Subsystem korrekt initialisiert wurde \cite{docker_healthcheck}. Die Parameter \texttt{start\_period}, \texttt{interval}, \texttt{timeout} und \texttt{retries} legen fest, wie oft und in welchen Zeitabständen der Healthcheck durchgeführt wird.
+
+Die Datenbank ist essentiell für die persistente Speicherung der Anwendungsdaten. Der Webserver kommuniziert direkt mit der Datenbank, um Benutzerinformationen, Forenbeiträge und andere relevante Daten zu speichern und abzurufen \cite{mariadb_communication}. Dank der Containerisierung kann die Datenbank isoliert und unabhängig von anderen Komponenten betrieben werden, was die Wartung und Skalierung erleichtert \cite{watada2019}.

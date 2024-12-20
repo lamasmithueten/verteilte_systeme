@@ -1,0 +1,36 @@
+% !TEX root =  master.tex
+\chapter{Docker Compose (Max Stege)}
+
+Docker Compose ist ein essentielles Werkzeug zur Verwaltung von Multi-Container-Anwendungen. Es bietet eine Vielzahl von Vorteilen, die den Entwicklungs- und Betriebssprozess erheblich vereinfachen:
+
+\begin{enumerate}
+\item \textbf{Multi-Container-Verwaltung}: \
+Docker Compose erlaubt es, mehrere Container mit einer einzigen YAML-Datei zu orchestrieren. Dies ist besonders nützlich in komplexen Anwendungen wie der hier entwickelten Drei-Schichten-Anwendung, wo Backend, Frontend und Datenbank in getrennten Containern laufen \cite{docker_compose_docs}.
+
+\item \textbf{Einfachere Konfiguration}: \
+Anstatt Container manuell mit zahlreichen \texttt{docker run}-Befehlen zu starten, wird die gesamte Konfiguration in einer zentralen Datei (z. B. \texttt{docker-compose.yml}) definiert. Dies umfasst Details wie Netzwerkverbindungen, Umgebungsvariablen, Abhängigkeiten und Healthchecks \cite{fava2024}.
+
+\item \textbf{Übersichtlichkeit}: \
+Docker Compose bietet eine klare Struktur für komplexe Anwendungen. In der YAML-Datei können Dienste wie der Webserver, die Datenbank und der TLS-Proxy logisch voneinander getrennt definiert werden, was die Wartbarkeit erleichtert \cite{watada2019}.
+
+\item \textbf{Wartbarkeit}: \
+Durch die zentrale Definition aller Dienste wird der Wartungsaufwand minimiert. Änderungen, wie das Hinzufügen neuer Dienste oder das Anpassen von Konfigurationen, können unkompliziert in der YAML-Datei vorgenommen werden \cite{fava2024}.
+
+\item \textbf{Bessere Bedienbarkeit}: \
+Mit einfachen Befehlen wie \texttt{docker-compose up} oder \texttt{docker-compose down} können alle Container gleichzeitig gestartet oder gestoppt werden. Zusätzlich ermöglicht die Option \texttt{--build}, neue Container-Builds direkt aus dem Quellcode zu erstellen \cite{docker_compose_docs}.
+\end{enumerate}
+
+In der entwickelten Webanwendung wurde Docker Compose eingesetzt, um die Komponenten Webserver, Datenbank und TLS-Proxy zu koordinieren:
+
+\begin{itemize}
+\item \textbf{Webserver}: \
+Das Docker Compose-Setup definiert das Image, die Volumes für Bilder, Labels für die TLS-Integration über den Traefik-Proxy und wichtige Umgebungsvariablen, die die Verbindung zur Datenbank regeln. Healthchecks stellen sicher, dass der Webserver ordnungsgemäß funktioniert \cite{services_docs}.
+
+\item \textbf{Datenbank}: \
+Die MariaDB-Datenbank wird ebenfalls als eigenständiger Dienst mit spezifischen Umgebungsvariablen und Volumes betrieben. Ein Initialisierungsskript wird beim Start des Containers ausgeführt, um die Datenbankstruktur zu erstellen \cite{watada2019}.
+
+\item \textbf{TLS-Proxy}: \
+Der Traefik-Container dient als Proxy, der sowohl HTTP- als auch HTTPS-Anfragen handhabt. Hierfür werden spezifische Ports und Konfigurationsdateien genutzt, um eine sichere Datenübertragung zu gewährleisten \cite{docker_compose_docs}.
+\end{itemize}
+
+Die Verwendung von Docker Compose bietet nicht nur Effizienz und Konsistenz bei der Entwicklung, sondern verbessert auch die Skalierbarkeit und Stabilität der Anwendung im Produktivbetrieb.
