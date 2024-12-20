@@ -1,3 +1,37 @@
 % !TEX root =  master.tex
-\chapter{Starten der Anwendung (Moritz Werr)}
+\chapter{Bedienung der Anwendung (Moritz Werr)}
 
+Bevor die Anwendung gestartet werden kann, muss zuerst das Image des Webservers gebaut werden. Dies wird normalerweise mit dem Befehl  \lstinline|docker build| gemacht. Der folgende Befehl baut das Image, wenn man sich im Wurzelverzeichnis dieses Projektes befindet: 
+\begin{verbatim}
+docker build . -t webserver
+\end{verbatim}
+
+ bzw.
+\begin{verbatim}
+docker compose build
+\end{verbatim}
+
+Nachdem das Image gebaut wurde, kann die Anwendung gestartet werden. Im Rahmen unseres Projektes haben wir die Emailauthentifizierung größtenteils hartkodiert. Die Datei  \lstinline|.env| beinhaltet das Passwort für den Emailversand und ist der Einfachheit in der ZIP-Datei enthalten, jedoch nicht auf Github. Wenn ein eigener Emailprovider verwendet werden soll, muss die Datei  \lstinline|msmtp.rc| im Projektordner angepasst werden.
+
+Die Anwendung kann durch individuelle  \lstinline|docker run|-Befehle gestartet werden, wird aber wegen der großen Anzahl an Parametern nicht bevorzugt. Stattdessen wird mit Docker-Compose die bereits konfigurierte Anwendung gestartet: 
+\begin{verbatim} 
+docker compose up -d
+\end{verbatim}
+
+Damit der Befehl funktioniert muss im Wurzelverzeichnis des Projektes der Befehl ausgeführt werden. Sonst muss der Pfad zu Datei explizit angegeben werden: 
+\begin{verbatim} 
+docker compose -f /path/to/project/folder/docker-compose.yml up -d
+\end{verbatim}
+ Das Bauen des Images kann hier auch vollführt werden:  
+\begin{verbatim} 
+docker compose up -d --build
+\end{verbatim}
+
+Damit wird die Anwendung im Hintergrund gestartet und erstellt auch noch automatisch die definierten Docker-Volumes. Weiterhin wird ein eigenes Docker-Netzwerk für die Anwendungscontainern erstellt. Dieses kann über die Hostports 80, 443 und 8080 erreicht werden. Die Anwendung sollte nun über \href{https://localhost/}{folgenden Link} erreichbar sein. 
+
+Dort können Sie sich mit den Anmeldeinformationen aus der SQL-Datei anmelden (Standardmäßig: \textit{admin} bzw. \textit{user} mit dem Passwort \textit{Test12345!}).
+
+Anschließend kann die Anwendung mit dem folgenden Befehl wieder beendet werden: 
+\begin{verbatim} 
+docker compose down
+\end{verbatim}
