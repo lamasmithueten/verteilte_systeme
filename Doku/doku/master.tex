@@ -1,0 +1,252 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Autoren:
+%   Prof. Dr. Bernhard Drabant
+%   Prof. Dr. Dennis Pfisterer
+%   Prof. Dr. Julian Reichwald
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	ANLEITUNG: 
+%   1. Ersetzen Sie firmenlogo.jpg im Verzeichnis img
+%   2. Passen Sie alle Stellen im Dokument an, die mit 
+%      @stud 
+%      markiert sind
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	ACHTUNG: 
+%   Für das Erstellen des Literaturverzeichnisses wird das 
+%   modernere Paket biblatex in Kombination mit biber 
+%   verwendet - nicht mehr das ältere Paket BibTex!
+%
+%   Bitte stellen Sie Ihre TeX-Umgebung entsprechend ein (z.B. TeXStudio): 
+%   Einstellungen --> Erzeugen --> Standard Bibliographieprogramm: biber
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[fontsize=12pt,BCOR=5mm,DIV=12,parskip=half,listof=totoc,
+               paper=a4,toc=bibliography,pointlessnumbers]{scrreprt}
+               
+\usepackage[utf8]{inputenc}
+
+%% LANGUAGE SETTINGS
+%
+% @stud: Sprache ggf. anpassen
+%
+%\usepackage[ngerman]{babel} 	        % german language
+%\usepackage[german=quotes]{csquotes} 	% correct quoting using \enquote{}
+\usepackage[english]{babel}          % english language
+\usepackage{csquotes} 	              % correct quoting using \enquote{}
+
+%%%%%%%%%%%%%
+%% ZITIERSTIL
+%%%%%%%%%%%%%
+%
+% @stud: Zitierstil in package biblatex unten wählen
+%
+% NUMERIC Style - e. g. [12]
+% style=numeric 
+%
+% IEEE Style - numeric kind of style 
+% style=ieee 
+%
+% ALPHABETIC Style - e. g. [AB12]
+% style=alphabetic 
+%
+% HARVARD Style 
+% style=apa 
+%
+% CHICAGO Style 
+% style=authoryear
+%
+% Position des Zitats:
+%
+% autocite=inline 
+%
+% (!!) FOOTNOTE POSITION NOT RECOMMENDED IN MINT DOMAIN:
+% autocite=footnote
+%
+\usepackage[backend=biber, autocite=inline, style=numeric]{biblatex} 	
+\usepackage{makeidx}                  % allows index generation
+\usepackage{listings}	                %Format Listings properly
+\usepackage{lipsum}                   % Blindtext
+\usepackage{graphicx}                 % use various graphics formats
+\usepackage[german]{varioref}         % nicer references \vref
+\usepackage{caption}	                % better Captions
+\usepackage{booktabs}                 % nicer Tabs
+\usepackage[hidelinks=true]{hyperref} % keine roten Markierungen bei Links
+\usepackage{fnpct}                    % Correct superscripts 
+\usepackage{calc}                     % Used for extra space below footsepline, in particular
+\usepackage{array}
+\usepackage{acronym}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{setspace}
+\usepackage{tocloft}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\usepackage[utf8]{inputenc}
+
+% Definitionen und Commands
+\newcommand{\indextype}{numeric}
+\newcommand{\abs}{\par\vskip 0.2cm\goodbreak\noindent}
+\newcommand{\nl}{\par\noindent}
+\newcommand{\mcl}[1]{\mathcal{#1}}
+\newcommand{\nowrite}[1]{}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\imagedir}{img}
+\newcommand{\TitelDerArbeit}[1]{\def\DerTitelDerArbeit{#1}\hypersetup{pdftitle={#1}}}
+\newcommand{\Dozent}[1]{\def\DerDozent{#1}}
+\newcommand{\AutorDerArbeit}[1]{\def\DerAutorDerArbeit{#1}\hypersetup{pdfauthor={#1}}}
+\newcommand{\Firma}[1]{\def\DerNameDerFirma{#1}}
+\newcommand{\Kurs}[1]{\def\DieKursbezeichnung{#1}}
+\newcommand{\Abteilung}[1]{\def\DerNameDerAbteilung{#1}}
+\newcommand{\Studiengangsleiter}[1]{\def\DerStudiengangsleiter{#1}}
+\newcommand{\WissBetreuer}[1]{\def\DerWissBetreuer{#1}}
+\newcommand{\FirmenBetreuer}[1]{\def\DerFirmenBetreuer{#1}}
+\newcommand{\Bearbeitungszeitraum}[1]{\def\DerBearbeitungszeitraum{#1}}
+\newcommand{\Abgabedatum}[1]{\def\DasAbgabedatum{#1}}
+\newcommand{\MatrikelnummerEins}[1]{\def\DieMatrikelnummerEins{#1}}
+\newcommand{\MatrikelnummerZwei}[1]{\def\DieMatrikelnummerZwei{#1}}
+\newcommand{\MatrikelnummerDrei}[1]{\def\DieMatrikelnummerDrei{#1}}
+\newcommand{\Studienrichtung}[1]{\def\DieStudienrichtung{#1}}
+\newcommand{\ArtDerArbeit}[1]{\def\DieArtDerArbeit{#1}}
+\newcommand{\Literaturverzeichnis}{Literaturverzeichnis}
+
+% Page Layout
+\oddsidemargin=0mm
+\evensidemargin=0mm
+\textwidth=159mm
+\topmargin=-18mm
+\headsep=10mm
+\textheight=251mm
+\footheight=15mm
+
+\makeindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LITERATURVERZEICHNIS
+% @stud: Literaturverzeichnis in Datei bibliography.bib anpassen. 
+%
+% [Alternative zu Verwendung von \initializeBibliography: Citavi ... (dazu eigenes LaTex Coding verwenden)]
+%
+\addbibresource{bibliography.bib}
+\DefineBibliographyStrings{ngerman}{andothers = {{et\,al\adddot}},}
+
+% Elementare Konfigurationen und Definitionen werden geladen 
+% @stud: gegebenenfalls anpassen
+%
+\input{config}
+
+% @stud
+%
+% PERSÖNLICHE ANGABEN (BITTE VOLLSTÄNDIG EINGEBEN zwischen den Klammern: {...})
+%
+\ArtDerArbeit{Projektbericht} % "Bachelor" oder "Projekt" wählen
+\TitelDerArbeit{Drei-Schicht Anwendung}
+\AutorDerArbeit{Moritz Werr, Phil Richter, Max Stege}
+\Abteilung{<Ihre Abteilung>}
+\Firma{<Ihre Firma>}
+\Kurs{TINF22AI2}
+\Studienrichtung{Angewandte Informatik}
+\MatrikelnummerEins{5401527}
+\MatrikelnummerZwei{4164342}
+\MatrikelnummerDrei{7285772}
+\Studiengangsleiter{<Ihr Studiengangsleiter>}
+\WissBetreuer{<Ihr(e) wissenschaftliche(r) Betreuer(in)>}
+\FirmenBetreuer{<Ihr(e) Firmenbetreuer(in)>}
+\Dozent{Jochen Kluger}
+\Bearbeitungszeitraum{01.10.2024 -- 20.12.2024}
+\Abgabedatum{dd.mm.yyyy}
+
+\begin{document}
+
+\setTitlepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EHRENWÖRTLICHE ERKLÄRUNG
+%
+% @stud: ewerkl.tex bearbeiten
+%
+\input{ewerkl} 
+\cleardoublepage  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SPERRVERMERK
+%
+% @stud: nondisclosurenotice.tex bearbeiten
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	KURZFASSUNG
+%
+% @stud: acknowledge.tex bearbeiten
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% VERZEICHNISSE und ABSTRACT
+%
+% @stud: ggf. nicht benötigte Verzeichnisse auskommentieren/löschen
+%
+%	Listingsverzeichnis / Quelltextverzeichnis
+\lstlistoflistings
+\cleardoublepage
+\onehalfspacing
+\initializeText
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% KAPITEL UND ANHÄNGE
+%
+% @stud:
+%   - nicht benötigte: auskommentieren/löschen
+%   - neue: bei Bedarf hinzufügen mittels input-Kommando an entsprechender Stelle einfügen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% KAPITEL
+%
+% @stud: einzelne Kapitel bearbeiten und eigene Kapitel hier einfügen
+%
+% Einleitung
+%\input{introduction}
+
+% mehrere Grundlagen- und Forschungs-Kapitel
+%\input{chapter1}
+%\input{chapter2}
+%\input{chapter3}
+%\input{chapter4}
+
+% Fazit und Ausblick
+%\input{conclusion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ANHÄNGE
+%
+% @stud: einzelne Anhänge bearbeiten und eigene Anhänge hier einfügen 
+%        die nachfolgenden Zeilen deaktivieren, wenn keine Anhänge verwendet werden
+%
+\initializeAppendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\singlespacing
+
+%\ihead{}
+%\printbibliography[title=\Literaturverzeichnis] 
+\printbibliography 
+\cleardoublepage
+
+%\initializeBibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INDEX
+% @stud: ggf. Index auskommentieren, wenn nicht benötigt
+%
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+\end{document}

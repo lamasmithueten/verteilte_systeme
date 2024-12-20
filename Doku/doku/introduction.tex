@@ -1,0 +1,21 @@
+% !TEX root =  master.tex
+\chapter{Einleitung (Max Stege)}
+
+\nocite{*}
+
+Die rasante Entwicklung der Computertechnologie wird seit Jahrzehnten von einer zentralen Beobachtung geprägt: dem Mooreschen Gesetz. Dieses Gesetz postuliert, dass sich die Anzahl der Transistoren auf integrierten Schaltkreisen etwa alle zwei Jahre verdoppelt, was zu exponentiellen Leistungssteigerungen bei gleichzeitiger Reduzierung der Kosten führt \cite{noauthor_moores_nodate}. Doch angesichts physikalischer und technischer Grenzen wird zunehmend diskutiert, ob dieses Gesetz auch heute noch seine Gültigkeit hat. Die Analyse der Entwicklung von Prozessoren, wie der Intel Core i7-Reihe, bietet eine spannende Möglichkeit, diese Frage aus einer datengetriebenen Perspektive zu untersuchen.
+
+Neben der Überprüfung des Mooreschen Gesetzes steht die Frage im Fokus, in welchen Bereichen die größten Fortschritte erzielt wurden. Hat die Erhöhung der Kernanzahl maßgeblich zur Leistungssteigerung beigetragen, oder sind es optimierte Taktraten und eine verbesserte Energieeffizienz, die den Unterschied ausmachen? Gleichzeitig wird analysiert, welche Metriken über die Generationen hinweg stagniert sind und welche Faktoren möglicherweise als limitierende Größen der technologischen Entwicklung wirken.
+
+Dieses Projekt, durchgeführt im Rahmen der Vorlesung \textit{Big Data Analytics}, widmet sich der strukturierten Analyse und Visualisierung von Daten zu Intel Core i7-Prozessoren der letzten Generationen. Dabei soll nicht nur der technische Fortschritt dokumentiert werden, sondern auch ein umfassendes Verständnis für die Datengrundlage und deren Interpretation entwickelt werden. Um dies zu ermöglichen, wurde eine mehrstufige Pipeline realisiert, die sich über folgende Schritte erstreckt:
+
+\begin{itemize}
+    \item \textbf{Datenbeschaffung:} Sammlung technischer Spezifikationen direkt von der Herstellerwebsite, da keine öffentliche API verfügbar ist.
+    \item \textbf{Datenaufbereitung:} Transponierung und Bereinigung der Rohdaten, um diese für die weitere Analyse nutzbar zu machen.
+    \item \textbf{Datenbankintegration:} Speicherung der Daten in einer relationalen PostgreSQL-Datenbank, um eine flexible und effiziente Abfrage der Datensätze zu ermöglichen.
+    \item \textbf{Analyse und Visualisierung:} Nutzung moderner Datenanalyse- und Visualisierungs- werkzeuge, um Muster und Trends über verschiedene Prozessorgenerationen hinweg zu identifizieren.
+\end{itemize}
+
+Durch diese strukturierte Herangehensweise können entscheidende Fragen beantwortet werden: Welche Metriken zeigen die stärksten Fortschritte? Wo sind technologische Grenzen erreicht? Und welche Entwicklungen könnten in den kommenden Jahren dominieren? Die gewonnenen Erkenntnisse liefern nicht nur einen detaillierten Überblick über die Entwicklung der Intel Core i7-Serie, sondern geben auch Impulse für zukünftige Innovationen und die strategische Ausrichtung der Halbleiterindustrie.
+
+Diese Dokumentation beschreibt im Detail den technischen und methodischen Ablauf des Projekts. Ziel ist es, eine nachvollziehbare und robuste Datenpipeline zu präsentieren, die als Grundlage für weiterführende Analysen und Forschungsprojekte dienen kann. Darüber hinaus wird kritisch reflektiert, welche Limitierungen und Herausforderungen sich in der Umsetzung ergeben haben, und wie diese überwunden werden können.
