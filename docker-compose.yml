@@ -16,8 +16,6 @@ services:
       - "8080:8080"                                   
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
-      - "./certs:/certs"  # Mount folder with certs
-      - "./traefik_dynamic.yml:/dynamic/traefik_dynamic.yml"  # Mount dynamic config
     depends_on:
       db:
         condition: service_healthy

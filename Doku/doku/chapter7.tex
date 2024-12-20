@@ -1,0 +1,46 @@
+\chapter{TLS-Proxy (Moritz Werr)}
+
+Im der Docker-Compose-Datei  \lstinline|docker-compose.yml| definiert folgender Abschnitt den Traefik-Container:
+
+\lstset{
+	breaklines=true,         % Enable line wrapping
+	breakatwhitespace=false, % Allow breaks at any character (not just whitespace)
+	basicstyle=\ttfamily,    % Use monospaced font
+}
+
+\begin{lstlisting}[caption={\texttt{docker-compose.yml}},captionpos=b]
+	
+services:
+  traefik:
+    image: traefik:v2.10 
+    command:
+      - "--api.insecure=true"                        
+      - "--providers.docker=true"                     
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"  
+      - "--providers.file.filename=/dynamic/traefik_dynamic.yml" 
+    ports:
+      - "80:80"                                       
+      - "443:443"                                     
+      - "8080:8080"                                   
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    depends_on:
+      db:
+        condition: service_healthy
+        restart: true
+      webserver:
+        condition: service_healthy
+        restart: true
+
+\end{lstlisting}
+
+Traefik übernimmt hier die TLS-Verschlüsselung für die Webanwendung. Dafür gibt es bereits ein existierendes Containerimage, weswegen dieses nur noch konfiguriert werden muss. Es wird ebenfalls in der gleichen Docker-Compose-Datei definiert.
+
+Zuerst wird das Image ausgewählt für den Service mit dem Namen \lstinline|traefik| genannt. Danach werden noch weitere Kommandos erwähnt, damit Traefik richtig konfiguriert ist . Primär muss TLS aktiviert werden und die entsprechenden HTTP- und HTTPS-Ports freigegeben werden. In unserem Fall wurde das Standardzertifikat von Traefik verwendet, weil selbstsignierte Zertifikate hinterlegen durchaus schwierig ist. Bei uns handelt es um einen Prototypen und nicht um ein produktionsreifes Endergebnis.
+
+ Als nächstes werden Port 80 und 443 für die Kommunikation freigegeben. Weiterhin wird der Port 8080 für das Managen des Containers freigegeben. Der normale Webservercontainer ist nicht außerhalb des Docker-Netzwerkes erreichbar, weswegen über den Traefik-Container kommuniziert werden muss.
+
+Weiterhin wird der Docker-Socket vom Hostsystem in den Container gereicht, damit der Traefik-Container den Webservercontainer finden kann (Service Discovery).
+
+Als letztes werden die Healthchecks für den Traefik-Container definiert. Da eine TLS-Verschlüsselung nicht ohne Applikationsserver funktioniert, mus dieser funktionieren. Weiterhin kann der Applikationsserver nicht ohne die Datenbank funktionieren. Der Traefik-Container ist nur indirekt von diesem abhängig, trotzdem wird dieser hier erwähnt, um die Abhängigkeit zu verdeutlichen.
