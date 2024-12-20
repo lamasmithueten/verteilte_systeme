@@ -1,144 +1,99 @@
 % !TEX root =  master.tex
-\chapter{Visualisieren der Daten (Phil Richter)}
-Nach der Bereinigung und dem Speichern der Daten in einer Datenbank, wie in den vorherigen Kapiteln beschrieben, können die Daten visualisiert werden. Dafür wird als Grundlage
-die Programmiersprache Python mit der Version 3.12.7 verwendet \cite{noauthor_python_nodate}. Diese ist vorallem im Bereich der Datenanalyse und -visualisierung sehr weit
-verbreitet \cite{noauthor_most_nodate, noauthor_popular_nodate}. Eine alternative Möglichkeit wäre die Verwendung von R, welches ebenfalls sehr weit verbreitet ist und speziell
-für die Datenanalyse entwickelt wurde \cite{noauthor_r_nodate}. Zudem wurde R bereits für die Säuberung der Daten, wie im Kapitel \ref{chap:säubern} beschrieben, verwendet.
-Da im Team allerdings mehr Erfahrung mit Python vorhanden war, wurde sich bei der Visualsierung für die Verwendung von Python entschieden.
+\chapter{Die Webanwendung (Phil Richter)}
+Die Webanwendung besteht aus einem Internetforum, in dem Benutzer Beiträge erstellen, kommentieren und liken
+können. Um am Forum teilzunehmen, muss sich der Benutzer mit einer Emailadresse und einem Passwort registrieren und einloggen.
+Falls der Benutzer sein Passwort vergisst, kann er dieses mit Hilfer einer Emailadresse zurücksetzen und ein neues vergeben. 
+Des Weiteren existiert ein Admin Account mit erweiterten Rechten. Dieser kann Beiträge von allen Nutzern
+löschen, während normale Benutzer nur ihre eigenen Beiträge löschen können. Zudem kann dieser sowohl die Emailadresse als auch
+das Passwort eines Benutzers ändern. Falls notwendig kann ein Admin auch einen Account löschen.
 
-Für das Laden und Visualisiern der Daten werden folgende Packages verwendet:
-\begin{table}[h!]
-    \centering
-    \begin{tabularx}{\textwidth}{|c|c|>{\centering\arraybackslash}X|}
-        \hline
-        \textbf{Package} & \textbf{Version} & \textbf{Beschreibung} \\ \hline
-        dotenv & 1.0.1 & Lädt Umgebungsvariablen aus einer \textit{.env} Datei \\ \hline
-        sqlalchemy & 2.0.36 & Ermöglicht Zugriff auf die Datenbank, sowie Datenbankabfragen \\ \hline
-        pandas & 2.2.3 & Ermöglicht die Manipulation, Analyse und Verarbeitung von Daten \\ \hline
-        matplotlib & 3.9.2 & Erstellt aus gegebenen Daten anpassbare Diagramme \\ \hline
-        seaborn & 0.13.2 & Basiert auf \textit{matplotlib} und wird ebenfalls zur Datenvisualisierung verwendet \\ \hline
-    \end{tabularx}
-    \caption{Auflistung aller verwendeten Packages, sowie ihrer Versionen}
-\end{table}
+Die Anwendung besteht im Frontend aus HTML \cite{noauthor_html_nodate}, CSS \cite{noauthor_cascading_nodate} und JavaScript
+\cite{noauthor_learn_nodate}. Das Backend wurde mit PHP \cite{noauthor_php_2024} geschrieben. Zusätzlich existiert noch eine
+Datenbank, in der die Benutzerdaten und Beiträge gespeichert werden. Die Datenbank wurde mit MariaDB \cite{noauthor_mariadb_nodate}
+realisiert. Die Mails werden mit msmtp \cite{noauthor_msmtp_nodate} über einen SMTP-Server von Gmail versendet.
 
-\section{Laden der Daten (Phil Richter)}\label{sec:laden}
-Im ersten Schritt der Visualisieren werden die Daten aus der Datenbank geladen. Dafür werden die Datenbankverbindungsinformationen mit Hilfe von \textit{dotenv}
-\cite{noauthor_python-dotenv_nodate} aus einer lokal definierten \textit{.env} Datei geladen. Es werden in diesem Fall Umgebungsvariablen verwendet, damit die
-Verbindungsinformationen nicht im Code hart codiert sind und somit nicht versehentlich veröffentlicht werden.
-Nach dem Laden der Variablen wird mit \textit{sqlalchemy} \cite{noauthor_sqlalchemy_nodate} eine Verbindung zur Datenbank aufgebaut und die Daten werden mit einer
-SQL-Querry abgefragt \cite{noauthor_orm_nodate}.
-Die abgefrageten Daten werden in einem \textit{pandas} \cite{noauthor_pandas_nodate} DataFrame gespeichert. Ein DataFrame ist dabei eine zweidimensionale Datenstruktur,
-wie eine Tabelle \cite{noauthor_pandasdataframe_nodate}. Das DataFrame wird verwendet, um die Daten vor der Visualisierung manipulieren zu können, ohne die Originaldaten zu verändern.
-Im folgendem Python-Code werden die Daten wie beschrieben geladen:
-
-\lstset{
-	breaklines=true,         
-	breakatwhitespace=false,
-	basicstyle=\ttfamily,    
-}
-
-\begin{lstlisting}[caption={\texttt{load data from the database}},captionpos=b]
-    import os
-    import re
-    import numpy as np
-    import pandas as pd
-    import seaborn as sn
-    import matplotlib.pyplot as plt
-    from sqlalchemy import create_engine
-    from dotenv import load_dotenv
-
-    load_dotenv() # load environment variables
-
-    # get the environment variables
-    b_user = os.getenv("DB_USER")
-    db_password = os.getenv("DB_PASSWORD")
-    db_name = os.getenv("DB_NAME")
-    db_host = os.getenv("DB_HOST")
-    db_port = os.getenv("DB_PORT")
-
-    db_url = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}" # create the db url
-    engine = create_engine(db_url)
-
-    query = "SELECT * FROM intel;" # query to get the data from the database
-    df = pd.read_sql(query, engine) # store the data in a dataframe
+\chapter{Webserver}
+Für den Webserver wurde ein Dockerfile implementiert welches wiefolgt aussieht:
+\begin{lstlisting}[caption={\texttt{dockerfile}},captionpos=b, breaklines=true]
+    FROM php:8.1-apache
+    COPY src/ /var/www/html
+    RUN apt-get update && apt-get install -y msmtp && rm -rf /var/cache/apt/lists
+    COPY msmtprc /etc/msmtprc
+    RUN chmod 600 /etc/msmtprc && chown www-data: /etc/msmtprc
+    RUN mkdir /var/www/html/pictures
+    RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
+    RUN printf "AddType application/x-httpd-php .html\nAddType application/x-httpd-php .htm\n" >> /etc/apache2/apache2.conf
+    RUN a2enmod rewrite
+    RUN chown www-data: -R /var/www/html/
+    RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+    RUN echo "sendmail_path = /usr/bin/msmtp -t" >> /usr/local/etc/php/php.ini-development
+    RUN cp /usr/local/etc/php/php.ini-development /usr/local/etc/php/php.ini
+    CMD apachectl -DFOREGROUND
 \end{lstlisting}
 
-\section{Bereinigen der geladenen Daten (Phil Richter)}\label{sec:bereinigen}
-Auch wenn die Daten, wie im Kapitel \ref{chap:säubern} beschrieben, bereits vor dem Speichern in die Datenbank bereinigt werden, bleinen kleine
-Unreinheiten in den Daten bestehen. Daher werden bestimmte Spalten im DataFrame nochmals angepasst.
+Im ersten Schritt wird in Zeile 1 das Basisimage \lstinline|php: 8.1-apache| gesetzt. Dies ist ein bereis vorkonfiguriertes
+Image mit PHP 8.1 und Apache Webserver. In Zeile 2 wird der Quellcode der Webanwendung, welche im Ordner \lstinline|src/| liegt,
+in den Ordner \lstinline|/var/www/html| des Containers kopiert. Damit die Webanwendung erfolgreich ausgefürt wird, müssen
+verschiedene Konfigurationen von Apache vorgenommen werden. Dies passiert in Zeile 7 bis 9. Dabei wird unteranderem das Apache
+Modul \lstinline|rewrite| aktiviert, sowie angepasst, dass die Dateiendungen \lstinline|.html| und \lstinline|.htm| als PHP-Dateien
+interpretiert werden.
 
-Ein Beispiel dafür ist die Spalte \textit{produktsortiment}. Diese enthält die jeweilige Generation des Prozessors, welche im Datensatz in drei verschiedenen
-Schreibweisen vorkommt:
-\begin{itemize}
-    \item Die Generation als Zahl, z.B. \textit{4. Generation}
-    \item Die Generation als Zahl ausgeschrieben, z.B. \textit{vierte Generation}
-    \item Die Generation als englische Zahl, z.B. \textit{4th Generation}
-\end{itemize}
-Um die Prozessoren für die Visualisierung nach ihrer Generation Gruppieren/Sortieren zu können, wird die Spalte \textit{produktsortiment}
-in eine neue Spalte \textit{generation} umgewandelt, wobei die Schreibweise vereinheitlicht wird. Dies wird mit Hilfe der Funktion \textit{extract\_generation}
-gemacht. Der Code dazu sieht wie folgt aus:
-\begin{lstlisting}[caption={\texttt{Funktion extraxct\_generation}},captionpos=b]
-    number_words = {
-        "erste": 1, "zweite": 2, "dritte": 3, "vierte": 4, "fuenfte": 5,
-        "sechste": 6, "siebte": 7, "achte": 8, "neunte": 9, "zehnte": 10
-    }
 
-    def extract_generation(gen_text):
-        # match the numeric generation
-        match_numeric = re.search(r'(\d+)(?:\.|th)?\s?Gen', gen_text, re.IGNORECASE)
-        if match_numeric:
-            # return the numeric generation
-            return int(match_numeric.group(1))
-    for word, num in number_words.items():
-        # check if the word is in the text
-        if word in gen_text.lower(): 
-            return num # return the number
-    return None
+Zusätzlich werden weitere, für die Webanwendung notwendige Komponenten installiert. Dazu gehört für den Mailversand
+\lstinline|msmtp| in Zeile 3 und für die Datenbank \lstinline|mysqli| in Zeile 11. Damit msmtp verwendet wird,
+wird in Zeile 12 der \lstinline|sendmail_path| in der PHP-Konfiguration korrekt gesetzt. Zudem wird in Zeile 4
+die Konfigurationsdatei \lstinline|msmtprc| in den Container kopiert. Diese Datei enthält die Konfigurationen wie unter
+anderem Host und Port für den Mailversand.
 
-    # extract the generation from the produktsortiment column
-    df['generation'] = df['produktsortiment'].apply(extract_generation) 
+Des Weitren wird in Zeile 6 ein Ordner \lstinline|pictures| erstellt, in welchem später die von den Nutzern hochgelandenen
+Bilder gespeichert werden. In Zeile 5 und 10 wird der Besitzer der Dateien  und Ordner auf \lstinline|www-data| gesetzt.
+Dadurch wird sichergestellt, dass der Apache Webserver auf die Dateien zugreifen kann.
+Zum Schluss wird in Zeile 14 der Apache Webserver gestartet.
+
+
+Um den Webserver als eigenständigen Container zu betreiben wird folgender Code in der \lstinline|docker-compose.yml| Datei
+definiert:
+\begin{lstlisting}[caption={\texttt{docker-compose.yml}},captionpos=b]
+    webserver:
+    image: webserver
+    build: .
+    volumes:
+      - pictures:/var/www/html/pictures
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.webserver.rule=Host(`localhost`)"
+      - "traefik.http.services.webserver.loadbalancer.server.port=80"
+      - "traefik.http.routers.webserver.entrypoints=web,websecure"
+      - "traefik.http.routers.webserver.tls=true"
+    environment:
+      DATABASE_USER: web_eng_user
+      DATABASE_HOST: mariadb
+      DATABASE_PASS: linux
+      DATABASE_NAME: web_eng
+      GMAIL_APP_PASSWORD: ${GMAIL_APP_PASSWORD}
+    depends_on:
+      db:
+        condition: service_healthy
+        restart: true
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
 \end{lstlisting}
 
-Im Code wird zuerst ein Dictionary \cite{noauthor_5_nodate} \textit{number\_words} definiert, welches die Zahlenwörter auf die entsprechende Zahl abbildet.
-Anschließend wird die Funktion \textit{extract\_generation} definiert, welche einen String als Parameter erwartet und die Prozessor-Generation aus dem Text extrahiert.
-Dabei wird zuerst mit Hilfe eines regulären Ausdrucks, faslls vorhanden, die numerische Generation extrahiert. Ein regulärer Ausdruck ist dabei eine Zeichenkette,
-die ein bestimmtes Suchmuster für ein gegebenen String definiert \cite{adegeo_regular_2022}.
-Der in der Funktion verwendete reguläre Ausdruck "\textit{(\textbackslash d+)(?:\.|th)?\textbackslash s?Gen}" sucht nach einer Zahl gefolgt von einem Punkt oder \textit{th},
-sowie einem Leerzeichen und den Buchstaben \textit{Gen}. Falls dabei ein übereinstimmender Text gefunden wird, wird dieser zurückgegeben. Anderenfalls wird
-überprüft, ob eines der im Dictionary definierten Wörter im Text vorkommt. Falls ja, wird die entsprechende Zahl zurückgegeben.
-Abschließend wird die Funktion auf die Spalte \textit{produktsortiment} angewendet und das Ergebnis in der neuen Spalte \textit{generation} gespeichert, welche nur noch die
-Generation als Zahl enthält.
-Die neue Spalte kann wie jede andere Spalte im DataFrame zur Visualisierung verwendet werden.
+Dabei wird in Zeile 2 das Image \lstinline|webserver| definiert, welches in Zeile 3 aus dem aktuellen Verzeichnis, dem dockerfile,
+gebaut wird. In Zeile 5 wird ein Volume \lstinline|pictures| definiert. Dies ist dazu notwendig, dass die hochgeladenen Bilder
+auch nach einem Neustart des Containers noch vorhanden sind. Die in Zeile 6 und folgenden definierten Labels sind dazu notwendig,
+dass der Webserver über den TLS-Proxy \lstinline|traefik| erreichbar ist. Außerdem wird festgelegt, dass der Webserver auf
+Localhost erreichbar ist und auf Port 80 lauscht. Zusätzlich wird tls aktiviert.
 
-\section{Erstellen von Graphen (Phil Richter)}
-Nachdem die Daten geladen und bereinigt wurden, können diese nun visualisiert werden. Dafür wird das Package \textit{matplotlib} \cite{noauthor_matplotlib_nodate},
-sowie \textit{seaborn} \cite{waskom_seaborn_2021} verwendet. Diese sind sehr weit verbreitet und bieten eine Vielzahl an Möglichkeiten, um Daten zu visualisieren
-\cite{noauthor_data_nodate}. Mit ihnen können verschiedene Diagramme wie Histrogramme, Scatterplots, Balkendiagramme und viele mehr erstellt werden \cite{noauthor_plot_nodate,
-noauthor_example_nodate}. Im folgenden ist ein Beispiel für ein Scatterplot und dessen Code dargestellt:
+Um auf die Datenbank zugreifen zu können und Mails über Gmail versenden zu können, werden in Zeile 12 und folgende 
+die notwendigen Umgebungsvariablen definiert und gesetzt. Dabei wird das Passwort für den Gmail Account aus einer
+Lokalen .env Datei gelesen. Somit wird sichergestellt, dass das Passwort nicht im Klartext vorliegt.
 
-\begin{figure}[H]
-	\centering 
-	\includegraphics[width=\textwidth]{\imagedir/Scatterplot_Grundtaktfrequenz_vs_Turbotaktfrequenz.png} 
-	\captionsetup{format=hang}
-	\caption[Scatterplot]{\label{fig:scatterplot_Grundtaktfrequenz}Scatterplot erstellt mit \textit{matplotlib} und \textit{seaborn}}
-\end{figure}
-
-\begin{lstlisting}[caption={\texttt{Code für den Scatterplot in Figur 5.1}},captionpos=b]
-    plt.figure(figsize=(10, 6))
-    sn.scatterplot(data=df, x='grundtaktfrequenz_des_prozessors_GHz', y='max_turbo_taktfrequenz_GHz', hue='generation')
-    plt.title("Grundtaktfrequenz vs. Turbotaktfrequenz", fontsize=16)
-    plt.legend(title='Generation des Prozessors', fontsize=10, title_fontsize=12)
-    plt.xlabel("Grundtaktfrequenz [GHz]", fontsize=12)
-    plt.ylabel("Turbotaktfrequenz (GHz)", fontsize=12)
-    plt.show()
-\end{lstlisting}
-
-Im Code wird zuerst ein neues Diagramm mit der Funktion \textit{plt.figure()} erstellt. Dabei wird die Größe des Diagramms auf 10x6 Zoll festgelegt. In Zeile
-zwei wird mit der Funktion \textit{sn.scatterplot()} bereits der Scatterplot erstellt. Dabei wird als Datenquelle das im Kapitel \ref{sec:laden} erstellte DataFrame
-\textit{df} verwendet. Die x-Achse wird mit der Spalte \textit{grundtaktfrequenz\_des\_prozessors\_GHz} und die y-Achse mit der Spalte \textit{max\_turbo\_taktfrequenz\_GHz}
-belegt. Die Farbe des Punktes repräsentiert die Generation des Prozessors, welche in der im Kapitel \ref{sec:bereinigen} erstellten Spalte \textit{generation} gespeichert ist.
-In den Spalten drei bis sechs werden der Titel, die Legende, sowie die Beschriftungen der x- und y-Achse festgelegt. Mit der Funktion \textit{plt.show()} in Spalte sieben wird
-das Diagramm angezeigt.
-
-Die restlichen Diagramme, die in dieser Arbeit erstellt wurden, sind nach einem ähnlichen Schema wie eben beschrieben erstellt worden. Dabei wurden unterschiedliche Diagrammtypen
-sowie unterschiedliche Spalten des DataFrames verwendet. Alle Diagramme sind im Ordner \textit{Datenanalyse} in der Datei \textit{visualization.ipynb} zu finden.
+Da der Webserver auf die Datenbank angewiesen ist, wird in Zeile 18 bis 21 eine Abhängigkeit definiert. Dabei
+wird überprüft, ob die Datenbank erreichbar ist. Falls nicht, wird diese neu gestartet. Des Weiteren wird in Zeile 22 bis 27
+ein Healthcheck definiert. Dabei wird alle 10 Sekunden mit Hilfe eines Curl-Befehls überprüft, ob der Webserver erreichbar ist.
+Falls der Healthcheck dreimal fehlschlägt, gilt der Container als "unhealthy".

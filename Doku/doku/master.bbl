@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.2 $
+% $ biblatex bbl format version 3.3 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,59 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global}
-    \entry{fava_assessing_2024}{inproceedings}{}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{noauthor_cascading_nodate}{online}{}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeltitlesource}{title}
+      \field{title}{Cascading Style Sheets}
+      \field{urlday}{20}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Cascading Style Sheets:C\:\\Users\\philm\\Zotero\\storage\\QYV9RVHV\\Overview.en.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.w3.org/Style/CSS/Overview.en.html
+      \endverb
+      \verb{url}
+      \verb https://www.w3.org/Style/CSS/Overview.en.html
+      \endverb
+    \endentry
+    \entry{fava2024}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=c1949b14bcc6ef44c0145a2947bb607c}{%
+           family={Fava},
+           familyi={F\bibinitperiod},
+           given={Felipe\bibnamedelima Bedinotto},
+           giveni={F\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{59e81dfb455a266e3ccaec7d06034e3c}
+      \strng{fullhash}{59e81dfb455a266e3ccaec7d06034e3c}
+      \strng{fullhashraw}{59e81dfb455a266e3ccaec7d06034e3c}
+      \strng{bibnamehash}{59e81dfb455a266e3ccaec7d06034e3c}
+      \strng{authorbibnamehash}{59e81dfb455a266e3ccaec7d06034e3c}
+      \strng{authornamehash}{59e81dfb455a266e3ccaec7d06034e3c}
+      \strng{authorfullhash}{59e81dfb455a266e3ccaec7d06034e3c}
+      \strng{authorfullhashraw}{59e81dfb455a266e3ccaec7d06034e3c}
+      \field{extraname}{1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{32nd Euromicro International Conference on Parallel, Distributed and Network-Based Processing}
+      \field{title}{Assessing the Performance of Docker in Docker Containers for Microservice-Based Architectures}
+      \field{year}{2024}
+      \field{pages}{137\bibrangedash 142}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/PDP62718.2024.00026
+      \endverb
+    \endentry
+    \entry{fava_assessing_2024}{inproceedings}{}{}
       \name{author}{9}{}{%
         {{hash=c1949b14bcc6ef44c0145a2947bb607c}{%
            family={Fava},
@@ -69,10 +120,13 @@
       }
       \strng{namehash}{59e81dfb455a266e3ccaec7d06034e3c}
       \strng{fullhash}{da0a3ecf821f2dd1a949308b89852c12}
+      \strng{fullhashraw}{da0a3ecf821f2dd1a949308b89852c12}
       \strng{bibnamehash}{59e81dfb455a266e3ccaec7d06034e3c}
       \strng{authorbibnamehash}{59e81dfb455a266e3ccaec7d06034e3c}
       \strng{authornamehash}{59e81dfb455a266e3ccaec7d06034e3c}
       \strng{authorfullhash}{da0a3ecf821f2dd1a949308b89852c12}
+      \strng{authorfullhashraw}{da0a3ecf821f2dd1a949308b89852c12}
+      \field{extraname}{2}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
@@ -89,7 +143,6 @@
       \field{year}{2024}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \true{nocite}
       \field{pages}{137\bibrangedash 142}
       \range{pages}{6}
       \verb{doi}
@@ -106,7 +159,59 @@
       \endverb
       \keyw{Benchmark testing,Benchmarks,Cloud Computing,Containers,{DinD},Docker Containers,Docker in Docker,Libraries,Linux,Memory management,Microservice architectures,Nested-container,Performance Evaluation,Reproducibility of results}
     \endentry
-    \entry{fowler_microservices_2015}{article}{}
+    \entry{mariadb_communication}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=4a7dc414ab993a0668ed32c62a8d41f9}{%
+           family={Foundation},
+           familyi={F\bibinitperiod},
+           given={MariaDB},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \strng{fullhash}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \strng{fullhashraw}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \strng{bibnamehash}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \strng{authorbibnamehash}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \strng{authornamehash}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \strng{authorfullhash}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \strng{authorfullhashraw}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \field{extraname}{1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://mariadb.com/kb/en/connect/}}
+      \field{note}{Accessed: 2024-12-20}
+      \field{title}{MariaDB Connectivity}
+      \field{year}{2024}
+    \endentry
+    \entry{mariadb_docs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=4a7dc414ab993a0668ed32c62a8d41f9}{%
+           family={Foundation},
+           familyi={F\bibinitperiod},
+           given={MariaDB},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \strng{fullhash}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \strng{fullhashraw}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \strng{bibnamehash}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \strng{authorbibnamehash}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \strng{authornamehash}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \strng{authorfullhash}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \strng{authorfullhashraw}{4a7dc414ab993a0668ed32c62a8d41f9}
+      \field{extraname}{2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://mariadb.com/kb/en/documentation/}}
+      \field{note}{Accessed: 2024-12-20}
+      \field{title}{MariaDB Documentation}
+      \field{year}{2024}
+    \endentry
+    \entry{fowler_microservices_2015}{article}{}{}
       \name{author}{2}{}{%
         {{hash=312ac886938a9b2be4f8eb607567fe4c}{%
            family={Fowler},
@@ -121,10 +226,12 @@
       }
       \strng{namehash}{416876065d6eb7d05b219dfec144635d}
       \strng{fullhash}{416876065d6eb7d05b219dfec144635d}
+      \strng{fullhashraw}{416876065d6eb7d05b219dfec144635d}
       \strng{bibnamehash}{416876065d6eb7d05b219dfec144635d}
       \strng{authorbibnamehash}{416876065d6eb7d05b219dfec144635d}
       \strng{authornamehash}{416876065d6eb7d05b219dfec144635d}
       \strng{authorfullhash}{416876065d6eb7d05b219dfec144635d}
+      \strng{authorfullhashraw}{416876065d6eb7d05b219dfec144635d}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
@@ -141,7 +248,238 @@
       \verb fowler_lewis_OTS_Architekturen_15.pdf:/home/werr/Zotero/storage/LAC9A4PS/fowler_lewis_OTS_Architekturen_15.pdf:application/pdf
       \endverb
     \endentry
-    \entry{noauthor_services_0100}{online}{}
+    \entry{noauthor_html_nodate}{online}{}{}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labeltitlesource}{title}
+      \field{title}{{HTML} Standard}
+      \field{urlday}{20}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://html.spec.whatwg.org/multipage/
+      \endverb
+      \verb{url}
+      \verb https://html.spec.whatwg.org/multipage/
+      \endverb
+    \endentry
+    \entry{docker_healthcheck}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=0a6e82dfd0df55343233c1768adf738c}{%
+           family={Inc.},
+           familyi={I\bibinitperiod},
+           given={Docker},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{fullhash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{fullhashraw}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{bibnamehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authorbibnamehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authornamehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authorfullhash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authorfullhashraw}{0a6e82dfd0df55343233c1768adf738c}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.docker.com/engine/reference/builder/\#healthcheck}}
+      \field{note}{Accessed: 2024-12-20}
+      \field{title}{Docker Healthcheck Documentation}
+      \field{year}{2024}
+    \endentry
+    \entry{environment_variables}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=0a6e82dfd0df55343233c1768adf738c}{%
+           family={Inc.},
+           familyi={I\bibinitperiod},
+           given={Docker},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{fullhash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{fullhashraw}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{bibnamehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authorbibnamehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authornamehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authorfullhash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authorfullhashraw}{0a6e82dfd0df55343233c1768adf738c}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.docker.com/compose/environment-variables/}}
+      \field{note}{Accessed: 2024-12-20}
+      \field{title}{Environment Variables in Compose}
+      \field{year}{2024}
+    \endentry
+    \entry{docker_persistence}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=0a6e82dfd0df55343233c1768adf738c}{%
+           family={Inc.},
+           familyi={I\bibinitperiod},
+           given={Docker},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{fullhash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{fullhashraw}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{bibnamehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authorbibnamehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authornamehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authorfullhash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authorfullhashraw}{0a6e82dfd0df55343233c1768adf738c}
+      \field{extraname}{3}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.docker.com/storage/}}
+      \field{note}{Accessed: 2024-12-20}
+      \field{title}{Managing Data in Docker}
+      \field{year}{2024}
+    \endentry
+    \entry{docker_compose_docs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=0a6e82dfd0df55343233c1768adf738c}{%
+           family={Inc.},
+           familyi={I\bibinitperiod},
+           given={Docker},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{fullhash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{fullhashraw}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{bibnamehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authorbibnamehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authornamehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authorfullhash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authorfullhashraw}{0a6e82dfd0df55343233c1768adf738c}
+      \field{extraname}{4}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.docker.com/compose/overview/}}
+      \field{note}{Accessed: 2024-12-20}
+      \field{title}{Overview of Docker Compose}
+      \field{year}{2024}
+    \endentry
+    \entry{services_docs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=0a6e82dfd0df55343233c1768adf738c}{%
+           family={Inc.},
+           familyi={I\bibinitperiod},
+           given={Docker},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{fullhash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{fullhashraw}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{bibnamehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authorbibnamehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authornamehash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authorfullhash}{0a6e82dfd0df55343233c1768adf738c}
+      \strng{authorfullhashraw}{0a6e82dfd0df55343233c1768adf738c}
+      \field{extraname}{5}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.docker.com/reference/compose-file/services/}}
+      \field{note}{Accessed: 2024-12-20}
+      \field{title}{Services Top-Level Elements}
+      \field{year}{2024}
+    \endentry
+    \entry{noauthor_learn_nodate}{online}{}{}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{JavaScript}.com is a resource for the {JavaScript} community. You will find resources and examples for {JavaScript} beginners as well as support for {JavaScript} experts. Learn {JavaScript} or free with our easy to use input output machine.}
+      \field{langid}{english}
+      \field{title}{Learn {JavaScript} Online - Courses for Beginners - javascript.com}
+      \field{urlday}{20}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\philm\\Zotero\\storage\\UJ97R8BD\\www.javascript.com.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.javascript.com/
+      \endverb
+      \verb{url}
+      \verb https://www.javascript.com/
+      \endverb
+    \endentry
+    \entry{noauthor_mariadb_nodate}{online}{}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeltitlesource}{title}
+      \field{abstract}{… Continue reading "{MariaDB} Foundation"}
+      \field{langid}{american}
+      \field{title}{{MariaDB} Foundation}
+      \field{titleaddon}{{MariaDB}.org}
+      \field{urlday}{20}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\philm\\Zotero\\storage\\2TRWY66R\\mariadb.org.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://mariadb.org/
+      \endverb
+      \verb{url}
+      \verb https://mariadb.org/
+      \endverb
+    \endentry
+    \entry{noauthor_msmtp_nodate}{online}{}{}
+      \field{sortinit}{m}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeltitlesource}{title}
+      \field{title}{msmtp - about}
+      \field{urlday}{20}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb msmtp - about:C\:\\Users\\philm\\Zotero\\storage\\I5UYAGVA\\msmtp.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://marlam.de/msmtp/
+      \endverb
+      \verb{url}
+      \verb https://marlam.de/msmtp/
+      \endverb
+    \endentry
+    \entry{noauthor_php_2024}{online}{}{}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{{PHP} is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world.}
+      \field{day}{19}
+      \field{langid}{german}
+      \field{month}{12}
+      \field{shorttitle}{{PHP}}
+      \field{title}{{PHP}: Hypertext Preprocessor}
+      \field{urlday}{20}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.php.net/index.php
+      \endverb
+      \verb{url}
+      \verb https://www.php.net/index.php
+      \endverb
+    \endentry
+    \entry{noauthor_services_0100}{online}{}{}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labeltitlesource}{title}
@@ -165,7 +503,7 @@
       \verb https://docs.docker.com/reference/compose-file/services/
       \endverb
     \endentry
-    \entry{su_modular_2024}{inproceedings}{}
+    \entry{su_modular_2024}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=1ef4d29b27f6816ca44986f0a2074dfa}{%
            family={Su},
@@ -180,10 +518,12 @@
       }
       \strng{namehash}{90b5ab3d052cd791a57b986fe8c8ae52}
       \strng{fullhash}{90b5ab3d052cd791a57b986fe8c8ae52}
+      \strng{fullhashraw}{90b5ab3d052cd791a57b986fe8c8ae52}
       \strng{bibnamehash}{90b5ab3d052cd791a57b986fe8c8ae52}
       \strng{authorbibnamehash}{90b5ab3d052cd791a57b986fe8c8ae52}
       \strng{authornamehash}{90b5ab3d052cd791a57b986fe8c8ae52}
       \strng{authorfullhash}{90b5ab3d052cd791a57b986fe8c8ae52}
+      \strng{authorfullhashraw}{90b5ab3d052cd791a57b986fe8c8ae52}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
@@ -213,7 +553,40 @@
       \endverb
       \keyw{Architecture,Bibliographies,Buildings,Computer architecture,Microservice architectures,microservices,modular monolith,software architecture,Software architecture,software engineering,systematic grey literature review,Systematics}
     \endentry
-    \entry{watada_emerging_2019}{article}{}
+    \entry{watada2019}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=ffc628749ff20893a8449ed6b290bfe4}{%
+           family={Watada},
+           familyi={W\bibinitperiod},
+           given={Junzo},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{9464c1ccca192e57b7cd1e4b9fa184a7}
+      \strng{fullhash}{9464c1ccca192e57b7cd1e4b9fa184a7}
+      \strng{fullhashraw}{9464c1ccca192e57b7cd1e4b9fa184a7}
+      \strng{bibnamehash}{9464c1ccca192e57b7cd1e4b9fa184a7}
+      \strng{authorbibnamehash}{9464c1ccca192e57b7cd1e4b9fa184a7}
+      \strng{authornamehash}{9464c1ccca192e57b7cd1e4b9fa184a7}
+      \strng{authorfullhash}{9464c1ccca192e57b7cd1e4b9fa184a7}
+      \strng{authorfullhashraw}{9464c1ccca192e57b7cd1e4b9fa184a7}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Emerging Trends, Techniques and Open Issues of Containerization: A Review}
+      \field{volume}{7}
+      \field{year}{2019}
+      \field{pages}{152443\bibrangedash 152472}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2019.2945930
+      \endverb
+    \endentry
+    \entry{watada_emerging_2019}{article}{}{}
       \name{author}{5}{}{%
         {{hash=ffc628749ff20893a8449ed6b290bfe4}{%
            family={Watada},
@@ -243,10 +616,13 @@
       }
       \strng{namehash}{9464c1ccca192e57b7cd1e4b9fa184a7}
       \strng{fullhash}{10e55673f48ccd2ed92afa4ff92fe33c}
+      \strng{fullhashraw}{10e55673f48ccd2ed92afa4ff92fe33c}
       \strng{bibnamehash}{9464c1ccca192e57b7cd1e4b9fa184a7}
       \strng{authorbibnamehash}{9464c1ccca192e57b7cd1e4b9fa184a7}
       \strng{authornamehash}{9464c1ccca192e57b7cd1e4b9fa184a7}
       \strng{authorfullhash}{10e55673f48ccd2ed92afa4ff92fe33c}
+      \strng{authorfullhashraw}{10e55673f48ccd2ed92afa4ff92fe33c}
+      \field{extraname}{2}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}

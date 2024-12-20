@@ -1,15 +1,17 @@
-[0] Config.pm:307> INFO - This is Biber 2.19
-[0] Config.pm:310> INFO - Logfile is 'master.blg'
-[81] biber:340> INFO - === Fr Dez 20, 2024, 15:28:09
-[93] Biber.pm:419> INFO - Reading 'master.bcf'
-[157] Biber.pm:976> INFO - Using all citekeys in bib section 0
-[177] Biber.pm:4419> INFO - Processing section 0
-[187] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[188] bibtex.pm:1713> INFO - LaTeX decoding ...
-[204] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[284] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[285] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[285] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[285] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[293] bbl.pm:660> INFO - Writing 'master.bbl' with encoding 'UTF-8'
-[295] bbl.pm:763> INFO - Output to master.bbl
+[0] Config.pm:308> INFO - This is Biber 2.20
+[1] Config.pm:311> INFO - Logfile is 'master.blg'
+[181] biber-MSWIN64:340> INFO - === 
+[235] Biber.pm:420> INFO - Reading 'master.bcf'
+[392] Biber.pm:991> INFO - Using all citekeys in bib section 0
+[420] Biber.pm:4463> INFO - Processing section 0
+[441] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[508] bibtex.pm:1713> INFO - LaTeX decoding ...
+[563] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[701] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[702] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[702] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[703] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[729] bbl.pm:676> INFO - Writing 'master.bbl' with encoding 'UTF-8'
+[744] bbl.pm:779> INFO - Output to master.bbl
+[745] Biber.pm:131> WARN - Duplicate entry key: 'watada2019' in file 'bibliography.bib', skipping ...
+[746] Biber.pm:133> INFO - WARNINGS: 1
